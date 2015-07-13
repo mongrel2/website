@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+		<!-- Title -->
+		<title>The Mongrel2 Web Server Project</title>
+		
+		<!-- Meta tags -->
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" media="screen" href="/css/light-green.css" />
+		
+		<!-- JavaScript -->
+		<script src="/js/forms.js" type="text/javascript"></script>
+		<script src="/js/jquery-1.6.1.min.js" type="text/javascript"></script>
+		<script src="/js/royal.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+			document.documentElement.className += 'js-ready';
+		</script>
+		
+		<!-- IE scripts and stylesheets -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="js/iefixes.js" type="text/javascript"></script>
+		<![endif]-->
+	</head>
+	
+	<body class="home">
+	
+		<div id="wrap">
+		
+			<header id="header">
+				<div class="inner-wrap clearfix">
+				
+					<h1 id="logo">
+						<a href="/">Mongrel2 - The Web Server That Loves Apps</a>
+					</h1>
+					
+					<nav>
+						<ul id="nav" class="clearfix">
+							<li>
+								<a href="/features/">Features</a>
+								<ul>
+									<li><a href="/features/languages.html">Tons of Languages</a></li>
+									<li><a href="/features/architectures.html">Operations Friendly</a></li>
+									<li><a href="/features/protocols.html">Multiple Protocols</a></li>
+									<li><a href="/features/design.html">Modern Design</a></li>
+								</ul>
+							</li>
+							<li><a href="/wiki/">Documentation</a>
+								<ul>
+									<li><a href="/wiki/quick_start.html">Getting Started</a></li>
+									<li><a href="http://mongrel2.org/manual/book-final.html">The Manual</a></li>
+									<li><a href="/wiki/contributor_instructions.html">Contributing</a></li>
+									<li><a href="/wiki/license.html">License</a></li>
+								</ul>
+							</li>
+							<li><a href="/downloads/">Downloads</a>
+								<ul>
+									<li><a href="https://github.com/zedshaw/mongrel2/releases/download/v1.9.0/mongrel2-v1.9.0.tar.gz">Latest tar.gz</a></li>
+									<li><a href="http://github.com/zedshaw/mongrel2">git repo</a></li>
+									<li><a href="/downloads/">Old Releases</a></li>
+								</ul>
+							</li>
+							<li><a href="/blog/">Blog</a>
+								<ul>
+									<li><a href="/blog/">Latest Posts</a></li>
+								</ul>
+                            </li>
+
+							<li><a href="/contact.html">Contact</a></li>
+						</ul><!-- end #nav -->
+					</nav>
+					
+				</div><!-- end .inner-wrap -->
+			</header><!-- end header -->
+
+<div id="featured">
+    <div class="inner-wrap">
+    
+        <div class="breadcrumb">
+            <h2>
+                &nbsp; <!-- this needs to be redone -->
+            </h2>
+        </div>
+    </div><!-- end .inner-wrap -->
+</div><!-- end #featured -->
+
+
+
+<div id="main" class="wiki">
+    <div class="inner-wrap clearfix">
+    
+        <div class="content content-right">
+        
+            <article class="post post-wiki clearfix">
+            
+<h1>Hacking On Mongrel2</h1>
+
+<p>This is organized more like a FAQ than a guide, but it gives all the
+information you probably need to hack on the Mongrel2 source code. It talks
+about getting the code, doing your first patch, coding guidelines, etc. These
+aren't meant to be strict rules but more guidelines to follow.</p>
+
+<h2>I want to hack on Mongrel2. How do I join?</h2>
+
+<p>As our famous tagline says, "This isn't a hippie commune like Github." We love
+patches and contributions from people, but Mongrel2 is a very specific kind of
+C code project we have to keep the contributor list small and awesome. That
+means we can't just let anyone in, we have to make you earn it. That doesn't
+mean you're not awesome if you don't get in, it just means we make it a little
+harder to join than your average github project does.
+To get in on Mongrel2 you have to prove you can write code by writing some code
+doing this:</p>
+
+<ol>
+    <li>Follow the instructions in this document.</li>
+    <li>Commit your changes to your repository when you think they're good.</li>
+    <li>Then go find a<em>ticket</em>to_do and write code to fix it.</li>
+    <li>Join the mongrel2@librelist.com mailing list or join #mongrel2 on
+    irc.freenode.org.</li>
+    <li>Finally, one of us will check out your changes and see if they're good to
+    pull. If they are, and you want to get into the project, then just fix a
+    few more bugs and we'll let you in.</li>
+</ol>
+
+<p>Each of these steps is documented in this document, so just read it real quick
+and get a good understanding of the project before you continue.</p>
+
+<h2>How do I get the source code?</h2>
+
+<p>The source code is currently maintained using git and the code itself is hosted
+on github. The project is at <a href="https://github.com/zedshaw/mongrel2">https://github.com/zedshaw/mongrel2</a>.</p>
+
+<p>The two branches available are:</p>
+
+<ul>
+    <li>master</li>
+    <li>develop</li>
+</ul>
+
+<h2>How do I find things to do?</h2>
+
+<p>We have a tickets system here and also at github that you can access. You
+can get a<em>ticket</em>to<em>do and write code to fix it. Obviously, you'll have to
+probably anonymous</em>login first if you want to do very much.</p>
+
+<h2>How do I make a change?</h2>
+
+<p>Git works like most version control systems in that you make your changes
+and "commit" them.
+Since you are probably not a committer yet, you just have to do this:</p>
+
+
+<p>We are also using git-flow to streamline our development efforts. Our model
+of using git-flow is described in <a href="http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/">http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/</a>.</p>
+
+<p>And also as shown in <a href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a>.</p>
+
+<p>Here are some quick instructions:</p>
+
+<ol>
+    <li>Install git-flow as in the README (https://github.com/nvie/gitflow).</li>
+    <li>In the mongrel2 run: git flow init</li>
+    <li>Just hit enter for all the defaults. Don't get fancy.</li>
+    <li>Start your hacking using: git flow feature start BlahBlahBlah</li>
+    <li>Commit like normal, don't push or tag anything.</li>
+    <li>End this feature with: git flow feature finish BlahBlahBlah</li>
+    <li>Finally: git push origin develop </li>
+</ol>
+
+<p>After you do this you just have to send a pull request via github and you 
+are done.</p>
+
+<h2>If I become a contributor how do I get mentioned?</h2>
+
+<p>Everyone who submits a change using this method will have their username
+mentioned in the timeline even if you're not registered as a core contributor.
+Core contributors get mentioned on the home page.
+After you become a contributor you then are thrown bags of money and caviar.</p>
+
+<h2>How do you prioritize what to work on?</h2>
+
+<p>We usually have a discussion on the mongrel2@librelist.com<em>mailing</em>list to
+figure out what to do next. Then we fill in the tickets with the stuff to do.
+Then we do that stuff.</p>
+
+<h2>Who comes up with the vision and direction?</h2>
+
+<p>Usually it's Zed, who wrote the majority of the content for this site.</p>
+
+<h2>What will get my contribution rejected?</h2>
+
+<p>Generally if your change adds too much code, is poorly written, doesn't work on
+multiple platforms, or doesn't have testing when it needs it. Don't worry
+though, we'll tell you how to clean it up and make it nice so that you learn
+good style. As a starting point, here's what we consider our style guide:</p>
+
+<h2>What is your style guide?</h2>
+
+<ol>
+    <li>Keep your code clean and "flatter" with good use of white space for readability.</li>
+    <li>Refactor common blocks of code or complex branches into functions, probably "static inline" is good.</li>
+    <li>Aim for lines around 80 characters if possible.</li>
+    <li>Check for errors from EVERY function using the check() macro from dbg.h.</li>
+    <li>Check for memory allocation working with the check_mem() macro from dbg.h.</li>
+    <li>Every if-elseif-else should have an else clause, and if that else shouldn't happen use the sentinel() macro to give an error.</li>
+    <li>Same thing for case-switch, always have a default with sentinel() if that default should not happen.</li>
+    <li>When in doubt, read and re-read the man page for function calls to make sure you got the error returns and parameters right.</li>
+    <li>Don't use the C string functions, use bstring from bstring.h to do string operations.</li>
+    <li>Try to write a test for your code, which is hard sometimes in C, but attempt it at least.</li>
+</ol>
+
+<p>In general the theme for Mongrel2 source is, "Don't code like an asshole." If
+you write a piece of code and you didn't consider how another person will use
+it, or just didn't care, then it'll probably get rejected.</p>
+
+<h2>How do I learn more about Mongrel2?</h2>
+
+<p>Check out the <a href="/wiki/">the documentation</a> for more information.</p>
+
+<h2>How do I see what's been changed on a file or view a diff?</h2>
+
+<p>After you log in you can use the timeline<em>checkins</em>only to see the list of
+changes. Then you pick one and there's various diffing options.
+To see how a file changed, browse for the file in in_Files and find the one you
+want to look at. You can then do advanced change logging and diffing of that
+file.</p>
+
+<p>The general way fossil works is that you get a lot of features from the command
+line, but complex operations like analyzing diffs is better done in the Web
+GUI. You can get to your own web GUI any time by doing fossil ui or fossil
+serve.</p>
+
+            </article><!-- end .post -->
+            
+        </div><!-- end .content -->
+        
+        <div class="sidebar">
+            <ul id="wiki-topics">
+                <li class="current">
+                <a href="/wiki/">Documentation</a>
+                <ul class="children">
+                    <li><a href="/wiki/">Documentation</a></li>
+                                </ul>
+                </li>
+            </ul>
+        
+        </div><!-- end .sidebar -->
+        
+        
+    </div><!-- end .inner-wrap -->
+</div><!-- end #main -->
+
+
+
+
+</div><!-- end #wrap -->
+		<footer id="footer">
+			<div class="inner-wrap">
+			
+				<nav>
+					<ul id="footer-nav" class="clearfix">
+						<li><a href="/index.html">Home</a></li>
+						<li><a href="/wiki/license.html">License</a></li>
+						<li><a href="/wiki/">Support</a></li>
+						<li><a href="/contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				
+				<!-- Set margin-top on logo to negative half of image height (to center it vertically) in CSS (.footer-logo) -->
+				<a href="/index.html"><img class="footer-logo" src="/images/light-green/logo-small.png" width="107" height="39" alt="logo" /></a>
+				
+				<small class="copyright">&copy;2011&nbsp;&nbsp;&middot;&nbsp;&nbsp; Zed A. Shaw</small>
+			
+			</div>
+		</footer><!-- end footer -->
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24168052-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</body>
+</html>
+

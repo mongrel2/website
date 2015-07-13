@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+		<!-- Title -->
+		<title>The Mongrel2 Web Server Project</title>
+		
+		<!-- Meta tags -->
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" media="screen" href="/css/light-green.css" />
+		
+		<!-- JavaScript -->
+		<script src="/js/forms.js" type="text/javascript"></script>
+		<script src="/js/jquery-1.6.1.min.js" type="text/javascript"></script>
+		<script src="/js/royal.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+			document.documentElement.className += 'js-ready';
+		</script>
+		
+		<!-- IE scripts and stylesheets -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="js/iefixes.js" type="text/javascript"></script>
+		<![endif]-->
+	</head>
+	
+	<body class="home">
+	
+		<div id="wrap">
+		
+			<header id="header">
+				<div class="inner-wrap clearfix">
+				
+					<h1 id="logo">
+						<a href="/">Mongrel2 - The Web Server That Loves Apps</a>
+					</h1>
+					
+					<nav>
+						<ul id="nav" class="clearfix">
+							<li>
+								<a href="/features/">Features</a>
+								<ul>
+									<li><a href="/features/languages.html">Tons of Languages</a></li>
+									<li><a href="/features/architectures.html">Operations Friendly</a></li>
+									<li><a href="/features/protocols.html">Multiple Protocols</a></li>
+									<li><a href="/features/design.html">Modern Design</a></li>
+								</ul>
+							</li>
+							<li><a href="/wiki/">Documentation</a>
+								<ul>
+									<li><a href="/wiki/quick_start.html">Getting Started</a></li>
+									<li><a href="http://mongrel2.org/manual/book-final.html">The Manual</a></li>
+									<li><a href="/wiki/contributor_instructions.html">Contributing</a></li>
+									<li><a href="/wiki/license.html">License</a></li>
+								</ul>
+							</li>
+							<li><a href="/downloads/">Downloads</a>
+								<ul>
+									<li><a href="https://github.com/zedshaw/mongrel2/releases/download/v1.9.0/mongrel2-v1.9.0.tar.gz">Latest tar.gz</a></li>
+									<li><a href="http://github.com/zedshaw/mongrel2">git repo</a></li>
+									<li><a href="/downloads/">Old Releases</a></li>
+								</ul>
+							</li>
+							<li><a href="/blog/">Blog</a>
+								<ul>
+									<li><a href="/blog/">Latest Posts</a></li>
+								</ul>
+                            </li>
+
+							<li><a href="/contact.html">Contact</a></li>
+						</ul><!-- end #nav -->
+					</nav>
+					
+				</div><!-- end .inner-wrap -->
+			</header><!-- end header -->
+
+<div id="featured">
+    <div class="inner-wrap">
+    
+        <div class="breadcrumb">
+            <h2>
+                &nbsp; <!-- this needs to be redone -->
+            </h2>
+        </div>
+    </div><!-- end .inner-wrap -->
+</div><!-- end #featured -->
+
+
+
+<div id="main" class="wiki">
+    <div class="inner-wrap clearfix">
+    
+        <div class="content content-right">
+        
+            <article class="post post-wiki clearfix">
+            
+<h1>Design Criticisms</h1>
+
+<p>The idea for Mongrel2 is slightly controversial, but it has potential.  Here's
+some criticisms about the proposed design, and I'm looking for more.</p>
+
+
+<h2>Criticism: Windows Registry</h2>
+
+<p>"Using sqlite for the config file will be like working with the windows registry."</p>
+
+<p>Mongrel2 now has support for configuring itself from anything, including the
+default of a sqlite3 database.  After a year of using Mongrel2 in production I can
+tell you this is freaking awesome.  It's nothing like the Windows Registry and 
+people telling you that are just trying to trot out an old Window$-Hater Linux
+Guy trope to scare you.</p>
+
+
+<h2>Criticism: Config Files Are Better</h2>
+
+<p>I work in a fully automated developer operations world, and have found
+that no, configuration files are not better.  Configuration files suck
+unless you're some jerk who likes editing them.  The rest of us generate
+them from a Chef or Puppet server and get on with our lives.</p>
+
+
+<h2>Criticism: It should be event based, not use coroutines or threads.</h2>
+
+<p>It is event based in that it uses kqueue/epoll/poll/select, but it abstracts
+the complexity of event systems away using coroutines.  You get the best of
+both worlds.</p>
+
+
+<h2>Criticism: Flash sucks, use something else.</h2>
+
+<p>JSSockets work, and they're reliable.  When WebSockets is established and in at
+least 2 browsers I'll add that as well.  Mongrel2 works with long polling but
+it's not that big of a deal, it's just how Mongrel2 works.  It's only a big
+deal in web servers that suck.</p>
+
+<p>We'll be also releasing a version with the latest "hybi" implementation of 
+WebSockets because they don't suck.</p>
+
+<h2>Criticism: It needs to serve files.</h2>
+
+<p>It does serve files, and since obviously that's the first vanity metric
+everyone uses, it will serve them fast.  It's just Mongrel2 will favor
+<em>language agnostic</em> applications over simple file serving.  Actually, I'm
+not sure why people thought it wouldn't.</p>
+
+
+<h2>Criticism: People hate SQL and won't want to use it to configure Mongrel2.</h2>
+
+<p>They don't use SQL, they use a tool called <em>m2sh</em> or use any programming language
+they want with any database they want, even flat files.</p>
+
+
+<h2>Criticism: SQLite3 is not Diff/Git friendly so I can't use it.</h2>
+
+<p>The default <em>m2sh</em> command uses a config file, so diff away.  If you want to
+then use only config files you can write a new backend that gets rid of 
+sqlite3, or uses redis.  Whatever you want.</p>
+
+<h2>Criticism: SQLite3 will be hard to change quickly so I'll be stuck in an emergency situation.</h2>
+
+<p>It's a SQL database, it's all about changes, and you won't use SQL directly,
+so this is just plain wrong.  Not only will you be able to change it
+quickly, but you'll be able to replicate those changes to all your
+servers in one shot, roll them back, and lots of other great features.</p>
+
+
+<h2>Criticism: It will suck for developers because so much emphasis is on operations.</h2>
+
+<p>No, it will obviously be for both, it'll just be focused on operations needs
+before developer needs.  You will of course still get your "5 minute quick
+start" and be able to fire up your application quickly, just like all the
+competitors.</p>
+
+<h2>Criticism: SQLite cannot handle hierarchical configs like in NGinx.</h2>
+
+<p>We have completely smashed this criticism in the face.  We have working
+code that not only can load a full hierarchical config from SQLite, but
+also load it <em>from anything else</em>.</p>
+
+
+
+            </article><!-- end .post -->
+            
+        </div><!-- end .content -->
+        
+        <div class="sidebar">
+            <ul id="wiki-topics">
+                <li class="current">
+                <a href="/wiki/">Documentation</a>
+                <ul class="children">
+                    <li><a href="/wiki/">Documentation</a></li>
+                                </ul>
+                </li>
+            </ul>
+        
+        </div><!-- end .sidebar -->
+        
+        
+    </div><!-- end .inner-wrap -->
+</div><!-- end #main -->
+
+
+
+
+</div><!-- end #wrap -->
+		<footer id="footer">
+			<div class="inner-wrap">
+			
+				<nav>
+					<ul id="footer-nav" class="clearfix">
+						<li><a href="/index.html">Home</a></li>
+						<li><a href="/wiki/license.html">License</a></li>
+						<li><a href="/wiki/">Support</a></li>
+						<li><a href="/contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				
+				<!-- Set margin-top on logo to negative half of image height (to center it vertically) in CSS (.footer-logo) -->
+				<a href="/index.html"><img class="footer-logo" src="/images/light-green/logo-small.png" width="107" height="39" alt="logo" /></a>
+				
+				<small class="copyright">&copy;2011&nbsp;&nbsp;&middot;&nbsp;&nbsp; Zed A. Shaw</small>
+			
+			</div>
+		</footer><!-- end footer -->
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24168052-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</body>
+</html>
+

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+		<!-- Title -->
+		<title>The Mongrel2 Web Server Project</title>
+		
+		<!-- Meta tags -->
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" media="screen" href="/css/light-green.css" />
+		
+		<!-- JavaScript -->
+		<script src="/js/forms.js" type="text/javascript"></script>
+		<script src="/js/jquery-1.6.1.min.js" type="text/javascript"></script>
+		<script src="/js/royal.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+			document.documentElement.className += 'js-ready';
+		</script>
+		
+		<!-- IE scripts and stylesheets -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="js/iefixes.js" type="text/javascript"></script>
+		<![endif]-->
+	</head>
+	
+	<body class="home">
+	
+		<div id="wrap">
+		
+			<header id="header">
+				<div class="inner-wrap clearfix">
+				
+					<h1 id="logo">
+						<a href="/">Mongrel2 - The Web Server That Loves Apps</a>
+					</h1>
+					
+					<nav>
+						<ul id="nav" class="clearfix">
+							<li>
+								<a href="/features/">Features</a>
+								<ul>
+									<li><a href="/features/languages.html">Tons of Languages</a></li>
+									<li><a href="/features/architectures.html">Operations Friendly</a></li>
+									<li><a href="/features/protocols.html">Multiple Protocols</a></li>
+									<li><a href="/features/design.html">Modern Design</a></li>
+								</ul>
+							</li>
+							<li><a href="/wiki/">Documentation</a>
+								<ul>
+									<li><a href="/wiki/quick_start.html">Getting Started</a></li>
+									<li><a href="http://mongrel2.org/manual/book-final.html">The Manual</a></li>
+									<li><a href="/wiki/contributor_instructions.html">Contributing</a></li>
+									<li><a href="/wiki/license.html">License</a></li>
+								</ul>
+							</li>
+							<li><a href="/downloads/">Downloads</a>
+								<ul>
+									<li><a href="https://github.com/zedshaw/mongrel2/releases/download/v1.9.0/mongrel2-v1.9.0.tar.gz">Latest tar.gz</a></li>
+									<li><a href="http://github.com/zedshaw/mongrel2">git repo</a></li>
+									<li><a href="/downloads/">Old Releases</a></li>
+								</ul>
+							</li>
+							<li><a href="/blog/">Blog</a>
+								<ul>
+									<li><a href="/blog/">Latest Posts</a></li>
+								</ul>
+                            </li>
+
+							<li><a href="/contact.html">Contact</a></li>
+						</ul><!-- end #nav -->
+					</nav>
+					
+				</div><!-- end .inner-wrap -->
+			</header><!-- end header -->
+
+<div id="featured">
+    <div class="inner-wrap">
+    
+        <div class="breadcrumb">
+            <h2>
+                &nbsp; <!-- this needs to be redone -->
+            </h2>
+        </div>
+    </div><!-- end .inner-wrap -->
+</div><!-- end #featured -->
+
+
+
+<div id="main" class="blog">
+    <div class="inner-wrap clearfix">
+
+        <div class="content content-left">
+
+            <article class="post post-blog clearfix">
+
+            
+<h1>The New Mongrel2.org Site</h1>
+
+<p>I'm the process of putting up the new Mongrel2.org website, so please
+be patient.  I've got a lot going on right now so I'll be hacking
+on the site as I need.  If you have suggestions for the site
+then <a href="/contacts.html">let us know</a>.</p>
+
+<p>Incidentally, here's the code I'm using to generate the site:</p>
+
+
+<pre>
+local tir = require 'tir.view'
+local markdown = require 'markdown'
+local posix = require 'posix'
+local json = require 'json'
+
+
+local Generator = {
+    output = 'output/',
+    source = 'src/',
+    header = Tir.view('header.html'),
+    footer = Tir.view('footer.html'),
+    top = Tir.view('top.html')
+}
+
+
+function Generator:load_template(data, in_name)
+    local out_ext = data.template:match("(%.[a-zA-Z0-9]+)$")
+    local out_front = in_name:match("(.+)%.[a-zA-Z0-9]+$")
+
+    local out_name = out_front .. out_ext
+    local template = Tir.view(data.template)
+
+    return template, out_name
+end
+
+
+function Generator:load_data(in_name)
+    local input = assert(Tir.load_file(self.source, in_name))
+    local data = assert(json.decode(input))
+    return data
+end
+
+
+function Generator:write(data, body, out_name)
+    local out = assert(io.open(self.output .. out_name, 'w'))
+
+    out:write(self.header(data))
+
+    if data.top then
+        out:write(self.top(data.top))
+    end
+
+    out:write(body(data) .. self.footer(data))
+end
+
+
+function Generator:render(data, in_name)
+    local body, out_name = self:load_template(data, in_name)
+    self:write(data, body, out_name)
+    return out_name
+end
+
+
+function Generator:extract_meta(stat, out_name, md)
+    local month, day, year = out_name:match("(%a+)_(%d+)_(%d+)")
+    local date = nil
+
+    if month then
+        date = ("%s-%s-%s"):format(month, day, year)
+    else
+        date = posix.strftime("%b-%d-%Y", stat.ctime)
+    end
+
+    local meta = {
+        date = date,
+        link = out_name,
+        title = md:match("(.-)%s==") or "NO TITLE",
+        intro = markdown(md:match("=+\n(.-)\n\n"))
+    }
+
+    return meta
+end
+
+
+function Generator:render_contents(data, source, output)
+    local base_strip = "^" .. self.source
+    local results = {}
+
+    local mdfiles = posix.glob(source .. "*.md")
+
+    if mdfiles then
+        for _, path in ipairs(mdfiles) do
+            local target = path:gsub(base_strip, "")
+            local template, out_name = self:load_template(data, target)
+
+            local content = Tir.load_file(self.source, target)
+            data.contents = markdown(content)
+
+            out_name = self:render(data, target)
+
+            local stat = posix.stat(path)
+            results[#results + 1] = self:extract_meta(stat, out_name, content)
+        end
+    end
+
+    return results
+end
+
+
+function Generator:run(dirs)
+    local base_strip = "^" .. self.source
+
+    for _, dir in ipairs(dirs) do
+        local source = self.source .. dir
+        local output = self.output .. dir
+
+        posix.mkdir(output)
+
+        for _, path in ipairs(posix.glob(source .. '*.json')) do
+            local target = path:gsub(base_strip, "")
+            local data = self:load_data(target)
+
+            if data.contents then
+                data.contents = self:render_contents(data.contents, source, output)
+            end
+
+            self:render(data, target)
+        end
+    end
+end
+
+
+local input = assert(Tir.load_file("./", "config.json"))
+local config = assert(json.decode(input))
+
+Generator:run(config.contents)
+</pre>
+
+
+<p>This uses the template code from <a href="http://github.com/zedshaw/Tir">the Tir framework</a>.</p>
+
+
+
+
+            </article><!-- end .post -->
+
+        </div><!-- end .content -->
+
+
+        <div class="sidebar">
+            <div class="widget">
+                <h6>About Mongrel2</h6>
+                <div class="widget-content">
+                    <p>
+                    The Mongrel2 project makes an awesome web server.
+                    </p>
+                </div><!-- end .widget-content -->
+            </div><!-- end .widget -->
+
+            <div class="widget">
+                <h6>Sponsors</h6>
+                <div class="widget-content">
+                    <h3>Sponsors</h3>
+<ul>
+<li><a href="http://websterclay.com/">Webster Clay</a></li>
+<li><a href="http://cramerdev.com">Cramerdev</a></li>
+<li><a href="http://railsmachine.com/">Rails Machine</a></li>
+<li><a href="http://ziplinegames.com">Zipline Games</a></li>
+<li><a href="http://ThinkCode.TV">ThinkCode.TV</a></li>
+<li><a href="http://envato.com/">Envato</a></li>
+<li><a href="http://highgroove.com/">Highgroove Studios</a></li>
+<li><a href="http://www.ceondo.com/">Céondo, Ltd.</a></li>
+<li><a href="http://pragmaticbadger.com/">Pragmatic Badger</a></li>
+<li><a href="http://infinitelybeta.com">Infinitely Beta</a></li>
+</ul>
+                </div><!-- end .widget-content -->
+            </div><!-- end .widget -->
+        </div><!-- end .sidebar -->
+
+    </div><!-- end .inner-wrap -->
+</div><!-- end #main -->
+
+</div><!-- end #wrap -->
+		<footer id="footer">
+			<div class="inner-wrap">
+			
+				<nav>
+					<ul id="footer-nav" class="clearfix">
+						<li><a href="/index.html">Home</a></li>
+						<li><a href="/wiki/license.html">License</a></li>
+						<li><a href="/wiki/">Support</a></li>
+						<li><a href="/contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				
+				<!-- Set margin-top on logo to negative half of image height (to center it vertically) in CSS (.footer-logo) -->
+				<a href="/index.html"><img class="footer-logo" src="/images/light-green/logo-small.png" width="107" height="39" alt="logo" /></a>
+				
+				<small class="copyright">&copy;2011&nbsp;&nbsp;&middot;&nbsp;&nbsp; Zed A. Shaw</small>
+			
+			</div>
+		</footer><!-- end footer -->
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24168052-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</body>
+</html>
+
