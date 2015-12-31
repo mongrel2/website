@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- index=1,2,next,fn-in,html --> 
 <meta name="src" content="book-final.tex"> 
-<meta name="date" content="2012-10-01 21:58:00"> 
+<meta name="date" content="2015-12-31 01:17:00"> 
 <link rel="stylesheet" type="text/css" href="book-final.css"> 
 </head><body 
 >
@@ -20,7 +20,7 @@ href="book-final.html#book-finalch3.html" >up</a>] </p></div>
 <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;2</span><br /><a 
  id="x5-110002"></a>Installing</h2>
 <!--l. 3--><p class="noindent" >Mongrel2 is designed to build on most modern Unix systems, specifically
-Linux and Mac OSX. It is written in C (<span 
+Linux and Mac&#x00A0;OSX. It is written in C (<span 
 class="pplri7t-">not Ruby</span>) and uses fairly vanilla C
 and standard libraries, except for one piece that implements the internal
 coroutines. Other than this, you should be able to compile and install Mongrel2
@@ -28,8 +28,8 @@ with nothing more than <span
 class="pcrro7t-">make all install </span>after you&#8217;ve installed all the
 dependencies.
 <!--l. 10--><p class="noindent" >Now, if when I said dependencies you started to groan at having to install software
-to use my software, well my friend, welcome to the future. You said you don&#8217;t want
-people reinventing the wheel, right? Great, that means you need to install software
+to use my software. Well, my friend, welcome to the future. You said you don&#8217;t want
+people reinventing the wheel, right? Great. That means you need to install software
 for my software to work. It&#8217;s either that or wait 10 years for me to build everything
 from scratch like some arrogant jackass.
 <!--l. 17--><p class="noindent" >We good now? Great, let&#8217;s get started.
@@ -62,37 +62,32 @@ class="content">                                                                
 class="pplri7t-">Installing Dependencies on</span>
 <span 
 class="pplri7t-">ArchLinux</span></span></div><!--tex4ht:label?: x5-12001r1 -->
-<div class="fancyvrb" id="fancyvrb1">
-<a 
+<div class="fancyvrb" id="fancyvrb1"><a 
  id="x5-12003r1"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor1"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;install</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ZeroMQ</span></span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;ZeroMQ</span></span><br class="fancyvrb" /><a 
  id="x5-12005r2"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;wget</span><span 
-class="pcrr7t-x-x-90">&#x00A0;http://download.zeromq.org/zeromq-2.1.4.tar.gz</span>
+class="pcrr7t-x-x-90">&#x00A0;http://download.zeromq.org/zeromq-2.1.7.tar.gz</span>
 <br class="fancyvrb" /><a 
  id="x5-12007r3"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;tar</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-xzvf</span><span 
-class="pcrr7t-x-x-90">&#x00A0;zeromq-2.1.4.tar.gz</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;zeromq-2.1.7.tar.gz</span><br class="fancyvrb" /><a 
  id="x5-12009r4"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor2"><span 
 class="pcrr7t-x-x-90">cd</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">zeromq-2.1.4/</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">zeromq-2.1.7/</span><br class="fancyvrb" /><a 
  id="x5-12011r5"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;./configure</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;./configure</span><br class="fancyvrb" /><a 
  id="x5-12013r6"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;make</span>
@@ -101,26 +96,22 @@ class="pcrr7t-x-x-90">&#x00A0;make</span>
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;sudo</span><span 
 class="pcrr7t-x-x-90">&#x00A0;make</span><span 
-class="pcrr7t-x-x-90">&#x00A0;install</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;install</span><br class="fancyvrb" /><a 
  id="x5-12017r8"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
  id="x5-12019r9"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor3"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;install</span><span 
-class="pcrr7t-x-x-90">&#x00A0;sqlite3</span></span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;sqlite3</span></span><br class="fancyvrb" /><a 
  id="x5-12021r10"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;sudo</span><span 
 class="pcrr7t-x-x-90">&#x00A0;pacman</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-S</span><span 
-class="pcrr7t-x-x-90">&#x00A0;sqlite3</span>
-</div>
+class="pcrr7t-x-x-90">&#x00A0;sqlite3</span></div>
                                                                   
 
                                                                   
@@ -128,21 +119,24 @@ class="pcrr7t-x-x-90">&#x00A0;sqlite3</span>
 <!--l. 50--><p class="noindent" >If you run into parts that your OS is missing, which is likely on Debian and SuSE
 systems, then you&#8217;ll have to go and figure out how to install it.
 <!--l. 54--><p class="noindent" >Some distributions (like Ubuntu) split &#8220;dev&#8221; and &#8220;runtime&#8221; packages. In order to
-build mongrel2 on these distros, you must install libsqlite3-dev: this package
-contains sqlite3.h, which Mongrel2 needs during compilation.
-<!--l. 58--><p class="noindent" >For the lazy, the command is: <span 
-class="pcrro7t-">sudo apt-get install libsqlite3-dev</span>
-<!--l. 60--><p class="noindent" >Other pieces known to be missing on ubuntu-like systems:
+build mongrel2 on these distros, you must install both. The package libsqlite3-dev
+contains sqlite3.h, which Mongrel2 needs during compilation, the package sqlite3 is
+needed for the unit tests.
+<!--l. 59--><p class="noindent" >Other pieces known to be missing on ubuntu-like systems:
      <ul class="itemize1">
      <li class="itemize">uuid-runtime: Needed by m2sh uuid command
      </li>
      <li class="itemize">You may need to run: <span 
 class="pcrro7t-">sudo ldconfig -v</span></li></ul>
+<!--l. 66--><p class="noindent" >For the lazy, the command is: <span 
+class="pcrro7t-">sudo apt-get install uuid-runtime</span>
+<span 
+class="pcrro7t-">sqlite3 libsqlite3-dev</span>
 <h3 class="sectionHead"><span class="titlemark">2.2    </span> <a 
- id="x5-130002.2"></a>Building Mongrel2</h3>
-<!--l. 70--><p class="noindent" >If everything went well you should be able to grab the Mongrel2 source and try
+ id="x5-130002.2"></a>Getting Mongrel2</h3>
+<!--l. 71--><p class="noindent" >If everything went well, you should be able to grab the Mongrel2 source and try
 building it. There&#8217;s two ways you can get the source code to Mongrel2:
-<!--l. 74--><p class="noindent" >
+<!--l. 75--><p class="noindent" >
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x5-13002x1">Install <a 
@@ -150,28 +144,28 @@ href="http://git-scm.org" >Git</a> and check out the source.
      </li>
      <li 
   class="enumerate" id="x5-13004x2">Grab the source .zip or tar.bz2 release and install it from there.</li></ol>
-<!--l. 79--><p class="noindent" >
+<!--l. 81--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">2.2.1    </span> <a 
  id="x5-140002.2.1"></a>Using the .tar.bz2 File</h4>
-<!--l. 81--><p class="noindent" >The easiest way to build Mongrel2 is to use the .tar.bz2 file from <a 
+<!--l. 83--><p class="noindent" >The easiest way to build Mongrel2 is to use the .tar.bz2 file from <a 
 href="http://mongrel2.org/home#download" >the main page
 downloads</a> section. Simply download it and you&#8217;re done.
-<!--l. 86--><p class="noindent" >
+<!--l. 88--><p class="noindent" >
+                                                                  
+
+                                                                  
 <h4 class="subsectionHead"><span class="titlemark">2.2.2    </span> <a 
  id="x5-150002.2.2"></a>Using git</h4>
-                                                                  
-
-                                                                  
-<!--l. 88--><p class="noindent" >If you like living on the edge then here&#8217;s how to follow the development source tree
+<!--l. 90--><p class="noindent" >If you like living on the edge then here&#8217;s how to follow the development source tree
 while we work on it:
-<!--l. 91--><p class="noindent" >First, get git running on your system, through your package manager or fetch the
+<!--l. 93--><p class="noindent" >First, get git running on your system, through your package manager or fetch the
 proper sources or binaries from the <a 
 href="http://git-scm.com/download" >Git Download page</a>.
-<!--l. 94--><p class="noindent" >Once you have git you can then get the Mongrel2 source and open it up:
+<!--l. 96--><p class="noindent" >Once you have git you can then get the Mongrel2 source and open it up:
                                                                   
 
                                                                   
-<!--l. 96--><p class="noindent" ><a 
+<!--l. 98--><p class="noindent" ><a 
  id="x5-15001r2"></a><hr class="float"><div class="float" 
 >
                                                                   
@@ -183,40 +177,43 @@ class="content">                                                                
 class="pplri7t-">Cloning the Mongrel2</span>
 <span 
 class="pplri7t-">Source</span></span></div><!--tex4ht:label?: x5-15001r2 -->
-<div class="fancyvrb" id="fancyvrb2">
-<a 
+<div class="fancyvrb" id="fancyvrb2"><a 
  id="x5-15003r1"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;git</span><span 
 class="pcrr7t-x-x-90">&#x00A0;clone</span><span 
-class="pcrr7t-x-x-90">&#x00A0;https://github.com/zedshaw/mongrel2.git</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;https://github.com/mongrel2/mongrel2.git</span><br class="fancyvrb" /><a 
  id="x5-15005r2"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor4"><span 
 class="pcrr7t-x-x-90">cd</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">mongrel2</span>
-</div>
+class="pcrr7t-x-x-90">mongrel2</span></div>
                                                                   
 
                                                                   
 </div><hr class="endfloat" />
-<!--l. 104--><p class="noindent" >Make sure you do this in order (just like with every set of instructions you follow) or
+<!--l. 106--><p class="noindent" >Make sure you do this in order (just like with every set of instructions you follow) or
 else you&#8217;ll get errors.
+<!--l. 109--><p class="noindent" >In order to stay up-to-date with all the changes, remember to periodically update
+your checkout (make sure you&#8217;re in the latest version before reporting a
+bug!). It&#8217;s as simple as <span 
+class="pcrro7t-">git pull</span>. And remember to rebuild and install
+afterwards!
 <h3 class="sectionHead"><span class="titlemark">2.3    </span> <a 
  id="x5-160002.3"></a>Building And Installing</h3>
-<!--l. 110--><p class="noindent" >Once you have the source ready to go you can build it and then install it with one
+<!--l. 116--><p class="noindent" >Once you have the source ready to go you can build it and then install it with one
 command: <span 
 class="pcrro7t-">make all install</span>
-<!--l. 113--><p class="noindent" >There is no <span 
+<!--l. 119--><p class="noindent" >There is no <span 
 class="pcrro7t-">./configure </span>for Mongrel2 since we avoid too many OS specific
 differences or shield those away with good feature checks in the code.
-<!--l. 116--><p class="noindent" >If you want to install to a different location than the default &#8220;/usr/local&#8220;, use
+<!--l. 122--><p class="noindent" >If you want to install to a different location than the default <span 
+class="pcrb7t-">/usr/local</span>, use
 <span 
 class="pcrro7t-">PREFIX=/path/to/somewhere make all install </span>instead.
-<!--l. 119--><p class="noindent" >The end result of this should be:
-<!--l. 121--><p class="noindent" >
+<!--l. 125--><p class="noindent" >The end result of this should be:
+<!--l. 127--><p class="noindent" >
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x5-16002x1">Mongrel2 builds and compiles without errors.
@@ -233,21 +230,22 @@ class="pcrro7t-">m2sh </span>binary gets installed.
      <li 
   class="enumerate" id="x5-16009x4">The <span 
 class="pcrro7t-">mongrel2 </span>binary gets installed.</li></ol>
-<!--l. 128--><p class="noindent" >If any of these stages fail, then you can simply try to fix them and then run: <span 
+<!--l. 134--><p class="noindent" >If any of these stages fail, then you can simply try to fix them and then run: <span 
 class="pcrro7t-">make</span>
 <span 
-class="pcrro7t-">clean all &amp;&amp; sudo make install </span>which will do everything all over
+class="pcrro7t-">clean all &amp;&amp; sudo make install</span>, which will do everything all over
 again.
-<!--l. 131--><p class="noindent" >
+<!--l. 137--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">2.3.1    </span> <a 
  id="x5-170002.3.1"></a>Other platforms than Linux</h4>
-<!--l. 133--><p class="noindent" >If you aren&#8217;t running Linux chances are good this standard procedure will not work
-for you.
-<!--l. 135--><p class="noindent" >The &#8220;Makefile&#8220; lists several targets for various platforms, as of writing this there
-are:
+<!--l. 139--><p class="noindent" >If you aren&#8217;t running Linux, chances are good this standard procedure will not work
                                                                   
 
                                                                   
+for you.
+<!--l. 141--><p class="noindent" >The <span 
+class="pcrb7t-">Makefile </span>lists several targets for various platforms. As of writing this, there
+are:
      <ul class="itemize1">
      <li class="itemize">freebsd
      </li>
@@ -256,12 +254,12 @@ are:
      <li class="itemize">openbsd
      </li>
      <li class="itemize">macports</li></ul>
-<!--l. 144--><p class="noindent" >So for example you would probably install zeromq and sqlite3 as ports and then
+<!--l. 150--><p class="noindent" >So, for example, you would probably install zeromq and sqlite3 as ports and then
 compile it like so:
                                                                   
 
                                                                   
-<!--l. 146--><p class="noindent" ><a 
+<!--l. 152--><p class="noindent" ><a 
  id="x5-17001r3"></a><hr class="float"><div class="float" 
 >
                                                                   
@@ -273,30 +271,25 @@ class="content">                                                                
 class="pplri7t-">Installing Mongrel2 on</span>
 <span 
 class="pplri7t-">FreeBSD</span></span></div><!--tex4ht:label?: x5-17001r3 -->
-<div class="fancyvrb" id="fancyvrb3">
-<a 
+<div class="fancyvrb" id="fancyvrb3"><a 
  id="x5-17003r1"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor5"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;install</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ZeroMQ</span></span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;ZeroMQ</span></span><br class="fancyvrb" /><a 
  id="x5-17005r2"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor6"><span 
 class="pcrr7t-x-x-90">cd</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;/usr/ports/devel/zmq</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;/usr/ports/devel/zmq</span><br class="fancyvrb" /><a 
  id="x5-17007r3"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;make</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;make</span><br class="fancyvrb" /><a 
  id="x5-17009r4"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;make</span><span 
-class="pcrr7t-x-x-90">&#x00A0;install</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;install</span><br class="fancyvrb" /><a 
  id="x5-17011r5"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span>
@@ -306,18 +299,15 @@ class="pcrr7t-x-x-90">&#x00A0;</span><span
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor7"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;install</span><span 
-class="pcrr7t-x-x-90">&#x00A0;sqlite3</span></span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;sqlite3</span></span><br class="fancyvrb" /><a 
  id="x5-17015r7"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor8"><span 
 class="pcrr7t-x-x-90">cd</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;/usr/ports/databases/sqlite3</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;/usr/ports/databases/sqlite3</span><br class="fancyvrb" /><a 
  id="x5-17017r8"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;make</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;make</span><br class="fancyvrb" /><a 
  id="x5-17019r9"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;make</span><span 
@@ -325,41 +315,37 @@ class="pcrr7t-x-x-90">&#x00A0;install</span>
 <br class="fancyvrb" /><a 
  id="x5-17021r10"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
  id="x5-17023r11"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor9"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;install</span><span 
-class="pcrr7t-x-x-90">&#x00A0;mongrel2</span></span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;mongrel2</span></span><br class="fancyvrb" /><a 
  id="x5-17025r12"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor10"><span 
 class="pcrr7t-x-x-90">cd</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;/where/you/extracted</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;/where/you/extracted</span><br class="fancyvrb" /><a 
  id="x5-17027r13"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;gmake</span><span 
 class="pcrr7t-x-x-90">&#x00A0;freebsd</span><span 
-class="pcrr7t-x-x-90">&#x00A0;install</span>
-</div>
+class="pcrr7t-x-x-90">&#x00A0;install</span></div>
                                                                   
 
                                                                   
 </div><hr class="endfloat" />
 <h3 class="sectionHead"><span class="titlemark">2.4    </span> <a 
  id="x5-180002.4"></a>Testing The Installation</h3>
-<!--l. 167--><p class="noindent" >When you are done, you probably want to make sure that it installed correctly.
+<!--l. 173--><p class="noindent" >When you are done, you probably want to make sure that it installed correctly.
 There&#8217;s a test configuration file in <span 
 class="pcrb7t-">tests/config.sqlite </span>that you can use to try it
 out:
                                                                   
 
                                                                   
-<!--l. 171--><p class="noindent" ><a 
+<!--l. 177--><p class="noindent" ><a 
  id="x5-18001r4"></a><hr class="float"><div class="float" 
 >
                                                                   
@@ -371,23 +357,19 @@ class="content">                                                                
 class="pplri7t-">First Test</span>
 <span 
 class="pplri7t-">Run</span></span></div><!--tex4ht:label?: x5-18001r4 -->
-<div class="fancyvrb" id="fancyvrb4">
-<a 
+<div class="fancyvrb" id="fancyvrb4"><a 
  id="x5-18003r1"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;mkdir</span><span 
-class="pcrr7t-x-x-90">&#x00A0;run</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;run</span><br class="fancyvrb" /><a 
  id="x5-18005r2"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;mkdir</span><span 
-class="pcrr7t-x-x-90">&#x00A0;logs</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;logs</span><br class="fancyvrb" /><a 
  id="x5-18007r3"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;mkdir</span><span 
-class="pcrr7t-x-x-90">&#x00A0;tmp</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;tmp</span><br class="fancyvrb" /><a 
  id="x5-18009r4"></a><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;m2sh</span><span 
@@ -402,93 +384,16 @@ class="pcrr7t-x-x-90">&#x00A0;start</span><span
 class="pcrr7t-x-x-90">&#x00A0;-db</span><span 
 class="pcrr7t-x-x-90">&#x00A0;tests/config.sqlite</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-host</span><span 
-class="pcrr7t-x-x-90">&#x00A0;localhost</span>
-</div>
+class="pcrr7t-x-x-90">&#x00A0;localhost</span></div>
                                                                   
 
                                                                   
 </div><hr class="endfloat" />
-<!--l. 182--><p class="noindent" >That&#8217;s it. Just hit CTRL-c for now and we&#8217;ll get into playing with this setup
+<!--l. 188--><p class="noindent" >That&#8217;s it! Just hit CTRL-c for now and we&#8217;ll get into playing with this setup
 later.
 <h3 class="sectionHead"><span class="titlemark">2.5    </span> <a 
- id="x5-190002.5"></a>Upgrading from trunk</h3>
-                                                                  
-
-                                                                  
-<!--l. 186--><p class="noindent" ><a 
- id="x5-19001r5"></a><hr class="float"><div class="float" 
->
-                                                                  
-
-                                                                  
- <div class="caption" 
-><span class="id">Source 5: </span><span  
-class="content">                                                                                                    <span 
-class="pplri7t-">Update your</span>
-<span 
-class="pplri7t-">checkout</span></span></div><!--tex4ht:label?: x5-19001r5 -->
-<div class="fancyvrb" id="fancyvrb5">
-<a 
- id="x5-19003r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor11"><span 
-class="pcrr7t-x-x-90">cd</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">mongrel2</span>
-<br class="fancyvrb" /><a 
- id="x5-19005r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;git</span><span 
-class="pcrr7t-x-x-90">&#x00A0;pull</span>
-<br class="fancyvrb" /><a 
- id="x5-19007r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span>
-<br class="fancyvrb" /><a 
- id="x5-19009r4"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor12"><span 
-class="pcrr7t-x-x-90">#</span><span 
-class="pcrr7t-x-x-90">&#x00A0;make</span><span 
-class="pcrr7t-x-x-90">&#x00A0;sure</span><span 
-class="pcrr7t-x-x-90">&#x00A0;you</span><span 
-class="pcrr7t-x-x-90">&#x00A0;get</span><span 
-class="pcrr7t-x-x-90">&#x00A0;a</span><span 
-class="pcrr7t-x-x-90">&#x00A0;clean</span><span 
-class="pcrr7t-x-x-90">&#x00A0;build</span></span>
-<br class="fancyvrb" /><a 
- id="x5-19011r5"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;make</span><span 
-class="pcrr7t-x-x-90">&#x00A0;clean</span><span 
-class="pcrr7t-x-x-90">&#x00A0;all</span>
-<br class="fancyvrb" /><a 
- id="x5-19013r6"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span>
-<br class="fancyvrb" /><a 
- id="x5-19015r7"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor13"><span 
-class="pcrr7t-x-x-90">#</span><span 
-class="pcrr7t-x-x-90">&#x00A0;install</span><span 
-class="pcrr7t-x-x-90">&#x00A0;it</span><span 
-class="pcrr7t-x-x-90">&#x00A0;once</span><span 
-class="pcrr7t-x-x-90">&#x00A0;again</span></span>
-<br class="fancyvrb" /><a 
- id="x5-19017r8"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;sudo</span><span 
-class="pcrr7t-x-x-90">&#x00A0;make</span><span 
-class="pcrr7t-x-x-90">&#x00A0;install</span>
-</div>
-                                                                  
-
-                                                                  
-</div><hr class="endfloat" />
-<h3 class="sectionHead"><span class="titlemark">2.6    </span> <a 
- id="x5-200002.6"></a>Up Next</h3>
-<!--l. 204--><p class="noindent" >You now should have a working Mongrel2 system installed and the m2sh
+ id="x5-190002.5"></a>Up Next</h3>
+<!--l. 195--><p class="noindent" >You now should have a working Mongrel2 system installed and the m2sh
 configuration interface ready to go. In the rest of this manual we&#8217;ll be simply
 learning how to do more with Mongrel2, like making our own configs, writing
 handlers, and other fun stuff.
@@ -501,7 +406,7 @@ handlers, and other fun stuff.
                                                                   
 
                                                                   
-<div class="footnotes"><!--l. 123--><p class="noindent" ><span class="footnote-mark"><a 
+<div class="footnotes"><!--l. 129--><p class="noindent" ><span class="footnote-mark"><a 
 href="#fn1x4-bk" id="fn1x4"><sup class="textsuperscript">1</sup></a></span><span 
 class="pplr7t-x-x-80">Please tell us about failures.</span>                                            </div> <!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
 href="book-finalch4.html" >next</a>]

@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- index=1,2,next,fn-in,html --> 
 <meta name="src" content="book-final.tex"> 
-<meta name="date" content="2012-10-01 21:58:00"> 
+<meta name="date" content="2015-12-31 01:17:00"> 
 <link rel="stylesheet" type="text/css" href="book-final.css"> 
 </head><body 
 >
@@ -40,7 +40,7 @@ href="book-finalch3.html#x5-110002">Installing</a></span>
 <br />&#x00A0;<span class="sectionToc" >2.1 <a 
 href="book-finalch3.html#x5-120002.1">Install Dependencies</a></span>
 <br />&#x00A0;<span class="sectionToc" >2.2 <a 
-href="book-finalch3.html#x5-130002.2">Building Mongrel2</a></span>
+href="book-finalch3.html#x5-130002.2">Getting Mongrel2</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >2.2.1 <a 
 href="book-finalch3.html#x5-140002.2.1" id="QQ2-5-16">Using the .tar.bz2 File</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >2.2.2 <a 
@@ -52,58 +52,58 @@ href="book-finalch3.html#x5-170002.3.1" id="QQ2-5-20">Other platforms than Linux
 <br />&#x00A0;<span class="sectionToc" >2.4 <a 
 href="book-finalch3.html#x5-180002.4">Testing The Installation</a></span>
 <br />&#x00A0;<span class="sectionToc" >2.5 <a 
-href="book-finalch3.html#x5-190002.5">Upgrading from trunk</a></span>
-<br />&#x00A0;<span class="sectionToc" >2.6 <a 
-href="book-finalch3.html#x5-200002.6">Up Next</a></span>
+href="book-finalch3.html#x5-190002.5">Up Next</a></span>
 <br /><span class="chapterToc" >3 <a 
-href="book-finalch4.html#x6-210003">Managing</a></span>
+href="book-finalch4.html#x6-200003">Managing</a></span>
 <br />&#x00A0;<span class="sectionToc" >3.1 <a 
-href="book-finalch4.html#x6-220003.1">Model-View-Controller</a></span>
+href="book-finalch4.html#x6-210003.1">Model-View-Controller</a></span>
 <br />&#x00A0;<span class="sectionToc" >3.2 <a 
-href="book-finalch4.html#x6-230003.2">Trying m2sh</a></span>
+href="book-finalch4.html#x6-220003.2">Trying m2sh</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.2.1 <a 
-href="book-finalch4.html#x6-240003.2.1" id="QQ2-6-34">What The Hell Just Happened?</a></span>
+href="book-finalch4.html#x6-230003.2.1" id="QQ2-6-32">What The Hell Just Happened?</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.3 <a 
+href="book-finalch4.html#x6-240003.3">A Simple Configuration File</a></span>
                                                                   
 
                                                                   
-<br />&#x00A0;<span class="sectionToc" >3.3 <a 
-href="book-finalch4.html#x6-250003.3">A Simple Configuration File</a></span>
 <br />&#x00A0;<span class="sectionToc" >3.4 <a 
-href="book-finalch4.html#x6-260003.4">How A Config Is Structured</a></span>
+href="book-finalch4.html#x6-250003.4">How A Config Is Structured</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.4.1 <a 
-href="book-finalch4.html#x6-270003.4.1" id="QQ2-6-39">Server</a></span>
+href="book-finalch4.html#x6-260003.4.1" id="QQ2-6-37">Server</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.4.2 <a 
-href="book-finalch4.html#x6-280003.4.2" id="QQ2-6-40">Host</a></span>
+href="book-finalch4.html#x6-270003.4.2" id="QQ2-6-38">Host</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.4.3 <a 
-href="book-finalch4.html#x6-290003.4.3" id="QQ2-6-41">Route</a></span>
+href="book-finalch4.html#x6-280003.4.3" id="QQ2-6-39">Route</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.4.4 <a 
-href="book-finalch4.html#x6-300003.4.4" id="QQ2-6-42">Dir</a></span>
+href="book-finalch4.html#x6-290003.4.4" id="QQ2-6-40">Dir</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.4.5 <a 
-href="book-finalch4.html#x6-310003.4.5" id="QQ2-6-43">Proxy</a></span>
+href="book-finalch4.html#x6-300003.4.5" id="QQ2-6-41">Proxy</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.4.6 <a 
-href="book-finalch4.html#x6-320003.4.6" id="QQ2-6-44">Handler</a></span>
+href="book-finalch4.html#x6-310003.4.6" id="QQ2-6-42">Handler</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.4.7 <a 
-href="book-finalch4.html#x6-330003.4.7" id="QQ2-6-45">Others</a></span>
+href="book-finalch4.html#x6-320003.4.7" id="QQ2-6-43">Others</a></span>
 <br />&#x00A0;<span class="sectionToc" >3.5 <a 
-href="book-finalch4.html#x6-340003.5">A More Complex Example</a></span>
+href="book-finalch4.html#x6-330003.5">A More Complex Example</a></span>
 <br />&#x00A0;<span class="sectionToc" >3.6 <a 
-href="book-finalch4.html#x6-350003.6">Routing And Host Patterns</a></span>
+href="book-finalch4.html#x6-340003.6">Routing And Host Patterns</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.6.1 <a 
-href="book-finalch4.html#x6-360003.6.1" id="QQ2-6-50">How Routing Works</a></span>
+href="book-finalch4.html#x6-350003.6.1" id="QQ2-6-48">How Routing Works</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.6.2 <a 
-href="book-finalch4.html#x6-370003.6.2" id="QQ2-6-51">JSON/XML Message Routing Syntax</a></span>
+href="book-finalch4.html#x6-360003.6.2" id="QQ2-6-49">JSON/XML Message Routing Syntax</a></span>
 <br />&#x00A0;<span class="sectionToc" >3.7 <a 
-href="book-finalch4.html#x6-380003.7">Deployment Logs And Commits</a></span>
+href="book-finalch4.html#x6-370003.7">Deployment Logs And Commits</a></span>
 <br />&#x00A0;<span class="sectionToc" >3.8 <a 
-href="book-finalch4.html#x6-390003.8">Control Port</a></span>
+href="book-finalch4.html#x6-380003.8">Control Port</a></span>
 <br />&#x00A0;<span class="sectionToc" >3.9 <a 
-href="book-finalch4.html#x6-400003.9">Multiple Servers</a></span>
+href="book-finalch4.html#x6-390003.9">Multiple Servers</a></span>
 <br />&#x00A0;<span class="sectionToc" >3.10 <a 
-href="book-finalch4.html#x6-410003.10">Tweakable Expert Settings</a></span>
+href="book-finalch4.html#x6-400003.10">Tweakable Expert Settings</a></span>
 <br />&#x00A0;<span class="sectionToc" >3.11 <a 
-href="book-finalch4.html#x6-420003.11">SSL Configuration</a></span>
+href="book-finalch4.html#x6-410003.11">SSL Configuration</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.11.1 <a 
-href="book-finalch4.html#x6-430003.11.1" id="QQ2-6-65">Experimental SSL Caching</a></span>
+href="book-finalch4.html#x6-420003.11.1" id="QQ2-6-63">SNI Support</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.11.2 <a 
+href="book-finalch4.html#x6-430003.11.2" id="QQ2-6-64">Experimental SSL Caching</a></span>
 <br />&#x00A0;<span class="sectionToc" >3.12 <a 
 href="book-finalch4.html#x6-440003.12">Configuring Filters (BETA)</a></span>
 <br /><span class="chapterToc" >4 <a 
@@ -111,9 +111,9 @@ href="book-finalch5.html#x7-450004">Deploying</a></span>
 <br />&#x00A0;<span class="sectionToc" >4.1 <a 
 href="book-finalch5.html#x7-460004.1">Mongrel2 Deployment Requirements</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.1.1 <a 
-href="book-finalch5.html#x7-470004.1.1" id="QQ2-7-71">Introducing procer</a></span>
+href="book-finalch5.html#x7-470004.1.1" id="QQ2-7-70">Introducing procer</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.1.2 <a 
-href="book-finalch5.html#x7-480004.1.2" id="QQ2-7-73">Installing procer</a></span>
+href="book-finalch5.html#x7-480004.1.2" id="QQ2-7-72">Installing procer</a></span>
 <br />&#x00A0;<span class="sectionToc" >4.2 <a 
 href="book-finalch5.html#x7-490004.2">The Plan</a></span>
 <br />&#x00A0;<span class="sectionToc" >4.3 <a 
@@ -123,14 +123,14 @@ href="book-finalch5.html#x7-510004.4">Step 2: The mongrel2.org Configuration</a>
 <br />&#x00A0;<span class="sectionToc" >4.5 <a 
 href="book-finalch5.html#x7-520004.5">Step 3: Setup procer</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.5.1 <a 
-href="book-finalch5.html#x7-530004.5.1" id="QQ2-7-85">The Python Examples</a></span>
+href="book-finalch5.html#x7-530004.5.1" id="QQ2-7-84">The Python Examples</a></span>
                                                                   
 
                                                                   
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.5.2 <a 
-href="book-finalch5.html#x7-540004.5.2" id="QQ2-7-89">Testing The New Setup</a></span>
+href="book-finalch5.html#x7-540004.5.2" id="QQ2-7-88">Testing The New Setup</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.5.3 <a 
-href="book-finalch5.html#x7-550004.5.3" id="QQ2-7-91">Nice Features of Procer</a></span>
+href="book-finalch5.html#x7-550004.5.3" id="QQ2-7-90">Nice Features of Procer</a></span>
 <br />&#x00A0;<span class="sectionToc" >4.6 <a 
 href="book-finalch5.html#x7-560004.6">Step 4: Static Content</a></span>
 <br />&#x00A0;<span class="sectionToc" >4.7 <a 
@@ -144,62 +144,66 @@ href="book-finalch6.html#x8-600005">Hacking</a></span>
 <br />&#x00A0;<span class="sectionToc" >5.1 <a 
 href="book-finalch6.html#x8-610005.1">Front-end Goodies</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.1.1 <a 
-href="book-finalch6.html#x8-620005.1.1" id="QQ2-8-100">HTTP</a></span>
+href="book-finalch6.html#x8-620005.1.1" id="QQ2-8-99">HTTP</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.1.2 <a 
-href="book-finalch6.html#x8-630005.1.2" id="QQ2-8-102">Proxying</a></span>
+href="book-finalch6.html#x8-630005.1.2" id="QQ2-8-101">Proxying</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.1.3 <a 
-href="book-finalch6.html#x8-640005.1.3" id="QQ2-8-104">WebSockets</a></span>
+href="book-finalch6.html#x8-640005.1.3" id="QQ2-8-103">WebSockets</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.1.4 <a 
-href="book-finalch6.html#x8-650005.1.4" id="QQ2-8-105">JSSocket</a></span>
+href="book-finalch6.html#x8-650005.1.4" id="QQ2-8-104">JSSocket</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.1.5 <a 
-href="book-finalch6.html#x8-660005.1.5" id="QQ2-8-106">Long Poll</a></span>
+href="book-finalch6.html#x8-660005.1.5" id="QQ2-8-105">Long Poll</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.1.6 <a 
-href="book-finalch6.html#x8-670005.1.6" id="QQ2-8-107">Streaming</a></span>
+href="book-finalch6.html#x8-670005.1.6" id="QQ2-8-106">Streaming</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.1.7 <a 
-href="book-finalch6.html#x8-680005.1.7" id="QQ2-8-108">N:M Responses</a></span>
+href="book-finalch6.html#x8-680005.1.7" id="QQ2-8-107">N:M Responses</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.1.8 <a 
-href="book-finalch6.html#x8-690005.1.8" id="QQ2-8-109">Async Uploads</a></span>
+href="book-finalch6.html#x8-690005.1.8" id="QQ2-8-108">Async Uploads</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.1.9 <a 
+href="book-finalch6.html#x8-700005.1.9" id="QQ2-8-109">Experimental large-upload streaming</a></span>
 <br />&#x00A0;<span class="sectionToc" >5.2 <a 
-href="book-finalch6.html#x8-700005.2">Introduction to ZeroMQ</a></span>
+href="book-finalch6.html#x8-710005.2">Introduction to ZeroMQ</a></span>
 <br />&#x00A0;<span class="sectionToc" >5.3 <a 
-href="book-finalch6.html#x8-710005.3">Handler ZeroMQ Format</a></span>
+href="book-finalch6.html#x8-720005.3">Handler ZeroMQ Format</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.3.1 <a 
-href="book-finalch6.html#x8-720005.3.1" id="QQ2-8-112">Socket Types Used</a></span>
+href="book-finalch6.html#x8-730005.3.1" id="QQ2-8-112">Socket Types Used</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.3.2 <a 
-href="book-finalch6.html#x8-730005.3.2" id="QQ2-8-113">UUID Addressing</a></span>
+href="book-finalch6.html#x8-740005.3.2" id="QQ2-8-113">UUID Addressing</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.3.3 <a 
-href="book-finalch6.html#x8-740005.3.3" id="QQ2-8-114">Numbers Identify Listeners</a></span>
+href="book-finalch6.html#x8-750005.3.3" id="QQ2-8-114">Numbers Identify Listeners</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.3.4 <a 
-href="book-finalch6.html#x8-750005.3.4" id="QQ2-8-115">Paths Identify Targets</a></span>
+href="book-finalch6.html#x8-760005.3.4" id="QQ2-8-115">Paths Identify Targets</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.3.5 <a 
-href="book-finalch6.html#x8-760005.3.5" id="QQ2-8-116">Request Headers And Body</a></span>
+href="book-finalch6.html#x8-770005.3.5" id="QQ2-8-116">Request Headers And Body</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.3.6 <a 
-href="book-finalch6.html#x8-770005.3.6" id="QQ2-8-117">Complete Message Examples</a></span>
+href="book-finalch6.html#x8-780005.3.6" id="QQ2-8-117">Complete Message Examples</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.3.7 <a 
-href="book-finalch6.html#x8-780005.3.7" id="QQ2-8-120">TNetStrings Alternative Protocol</a></span>
+href="book-finalch6.html#x8-790005.3.7" id="QQ2-8-120">TNetStrings Alternative Protocol</a></span>
 <br />&#x00A0;&#x00A0;<span class="subsectionToc" >5.3.8 <a 
-href="book-finalch6.html#x8-790005.3.8" id="QQ2-8-122">Python Handler API</a></span>
+href="book-finalch6.html#x8-800005.3.8" id="QQ2-8-122">Python Handler API</a></span>
 <br />&#x00A0;<span class="sectionToc" >5.4 <a 
-href="book-finalch6.html#x8-800005.4">Basic Handler Demo</a></span>
+href="book-finalch6.html#x8-810005.4">Basic Handler Demo</a></span>
 <br />&#x00A0;<span class="sectionToc" >5.5 <a 
-href="book-finalch6.html#x8-810005.5">Async File Upload Demo</a></span>
-<br />&#x00A0;<span class="sectionToc" >5.6 <a 
-href="book-finalch6.html#x8-820005.6">MP3 Streaming Demo</a></span>
+href="book-finalch6.html#x8-820005.5">Async File Upload Demo</a></span>
                                                                   
 
                                                                   
+<br />&#x00A0;<span class="sectionToc" >5.6 <a 
+href="book-finalch6.html#x8-830005.6">MP3 Streaming Demo</a></span>
 <br />&#x00A0;<span class="sectionToc" >5.7 <a 
-href="book-finalch6.html#x8-830005.7">Chat Demo</a></span>
+href="book-finalch6.html#x8-840005.7">Chat Demo</a></span>
 <br />&#x00A0;<span class="sectionToc" >5.8 <a 
-href="book-finalch6.html#x8-840005.8">Writing A Filter (BETA)</a></span>
+href="book-finalch6.html#x8-850005.8">Extended Reply Format</a></span>
 <br />&#x00A0;<span class="sectionToc" >5.9 <a 
-href="book-finalch6.html#x8-850005.9">Other Language APIs</a></span>
+href="book-finalch6.html#x8-860005.9">Writing A Filter (BETA)</a></span>
 <br />&#x00A0;<span class="sectionToc" >5.10 <a 
-href="book-finalch6.html#x8-860005.10">Writing Your Own m2sh</a></span>
+href="book-finalch6.html#x8-870005.10">Other Language APIs</a></span>
 <br />&#x00A0;<span class="sectionToc" >5.11 <a 
-href="book-finalch6.html#x8-870005.11">Config From Anything: Experimental</a></span>
+href="book-finalch6.html#x8-880005.11">Writing Your Own m2sh</a></span>
+<br />&#x00A0;<span class="sectionToc" >5.12 <a 
+href="book-finalch6.html#x8-890005.12">Config From Anything: Experimental</a></span>
 <br /><span class="chapterToc" >6 <a 
-href="book-finalch7.html#x9-880006">Contributing</a></span>
+href="book-finalch7.html#x9-900006">Contributing</a></span>
 </div>
                                                                   
 
