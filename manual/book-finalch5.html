@@ -3,11 +3,10 @@
 <html > 
 <head><title>4 Deploying</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
-<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
-<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
 <!-- index=1,2,next,fn-in,html --> 
 <meta name="src" content="book-final.tex"> 
-<meta name="date" content="2015-12-31 01:17:00"> 
 <link rel="stylesheet" type="text/css" href="book-final.css"> 
 </head><body 
 >
@@ -75,7 +74,7 @@ class="content">                                                                
 class="pplri7t-">Learning</span>
 <span 
 class="pplri7t-">Python</span></span></div><!--tex4ht:label?: x7-46001r5 -->
-     <div class="quote">
+     <blockquote class="quote">
      <!--l. 30--><p class="indent" >   Why should you learn programming? The trend is that if you are
      a system administrator who can&#8217;t code, you are on your way out.
      Eventually, you&#8217;ll be in charge of automating systems; not manually
@@ -97,7 +96,7 @@ class="pplri7t-">really </span>learn programming, and have a higher
      this  and  you  may  learn  something,  but  learning  Python  will  be
      important later.
      <!--l. 47--><p class="indent" >   But <span 
-class="pplri7t-">don&#8217;t </span>read &#8220;Dive Into Python&#8221;. It is a horrible introduction. </div>
+class="pplri7t-">don&#8217;t </span>read &#8220;Dive Into Python&#8221;. It is a horrible introduction. </blockquote>
                                                                   
 
                                                                   
@@ -149,10 +148,10 @@ these differences:
      <li 
   class="enumerate" id="x7-47004x2">It will build anywhere Mongrel2 builds, because it reuses the <span 
 class="pcrb7t-">libm2.a</span>
+     library from the Mongrel2 project.
                                                                   
 
                                                                   
-     library from the Mongrel2 project.
      </li>
      <li 
   class="enumerate" id="x7-47006x3">It  doesn&#8217;t  want  to  be  the  one  true  init,  or  even  expect  to  be  running
@@ -204,7 +203,7 @@ class="content">                                                                
 class="pplri7t-">Alternatives to</span>
 <span 
 class="pplri7t-">procer</span></span></div><!--tex4ht:label?: x7-47019r6 -->
-     <div class="quote">
+     <blockquote class="quote">
      <!--l. 112--><p class="indent" >   I   wrote   procer   mostly   for   this   book,   but   I   also   use   it   for
      my  Mongrel2  deployments.  It  works  for  me  but  you  can  try
      other   solutions.   By   default,   Mongrel2   will   work   with   either
@@ -222,7 +221,7 @@ href="http://github.com/peterkeen/proclaunch" >proclaunch</a>  as  another  alte
 class="pcrro7t-">mongrel2 config.sqlite server</span><span 
 class="pcrro7t-">_uuid </span>and it&#8217;ll work right.
      Want to put it in init.d or use procer or similar? Fine, run it as root.
-     </div>
+     </blockquote>
                                                                   
 
                                                                   
@@ -248,22 +247,19 @@ class="content">                                                                
 class="pplri7t-">Install</span>
 <span 
 class="pplri7t-">procer</span></span></div><!--tex4ht:label?: x7-48001r19 -->
-<div class="fancyvrb" id="fancyvrb13"><a 
- id="x7-48003r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor207"><span 
-class="pcrr7t-x-x-90">cd</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">projects/mongrel2</span><br class="fancyvrb" /><a 
+<pre class="fancyvrb" id="fancyvrb13"><a 
+ id="x7-48003r1"></a><span id="textcolor207"><span 
+class="pcrr7t-x-x-90">cd</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;projects/mongrel2</span> 
+<a 
  id="x7-48005r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;make</span><span 
+class="pcrr7t-x-x-90">make</span><span 
 class="pcrr7t-x-x-90">&#x00A0;clean</span><span 
 class="pcrr7t-x-x-90">&#x00A0;all</span><span 
 class="pcrr7t-x-x-90">&#x00A0;&amp;&amp;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;sudo</span><span 
 class="pcrr7t-x-x-90">&#x00A0;make</span><span 
-class="pcrr7t-x-x-90">&#x00A0;install</span></div>
+class="pcrr7t-x-x-90">&#x00A0;install</span></pre>
                                                                   
 
                                                                   
@@ -313,9 +309,6 @@ change this up later if you find a better way.
                                                                   
 
                                                                   
-                                                                  
-
-                                                                  
 <!--l. 175--><p class="noindent" ><a 
  id="x7-50001r20"></a><hr class="float"><div class="float" 
 >
@@ -328,47 +321,37 @@ class="content">                                                                
 class="pplri7t-">Make Deployment</span>
 <span 
 class="pplri7t-">Directories</span></span></div><!--tex4ht:label?: x7-50001r20 -->
-<div class="fancyvrb" id="fancyvrb14"><a 
- id="x7-50003r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor208"><span 
+<pre class="fancyvrb" id="fancyvrb14"><a 
+ id="x7-50003r1"></a><span id="textcolor208"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;go</span><span 
 class="pcrr7t-x-x-90">&#x00A0;home</span><span 
-class="pcrr7t-x-x-90">&#x00A0;first</span></span><br class="fancyvrb" /><a 
- id="x7-50005r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor209"><span 
+class="pcrr7t-x-x-90">&#x00A0;first</span></span> 
+<a 
+ id="x7-50005r2"></a><span id="textcolor209"><span 
 class="pcrr7t-x-x-90">cd</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;~/</span><br class="fancyvrb" /><a 
- id="x7-50007r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-50009r4"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor210"><span 
+class="pcrr7t-x-x-90">&#x00A0;&#x02DC;/</span> 
+<a 
+ id="x7-50007r3"></a> 
+<a 
+ id="x7-50009r4"></a><span id="textcolor210"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;create</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
 class="pcrr7t-x-x-90">&#x00A0;deployment</span><span 
-class="pcrr7t-x-x-90">&#x00A0;dir</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;dir</span></span> 
+<a 
  id="x7-50011r5"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;mkdir</span><span 
-class="pcrr7t-x-x-90">&#x00A0;deployment</span><br class="fancyvrb" /><a 
- id="x7-50013r6"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor211"><span 
-class="pcrr7t-x-x-90">cd</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">deployment/</span>
-<br class="fancyvrb" /><a 
- id="x7-50015r7"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-50017r8"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor212"><span 
+class="pcrr7t-x-x-90">mkdir</span><span 
+class="pcrr7t-x-x-90">&#x00A0;deployment</span> 
+<a 
+ id="x7-50013r6"></a><span id="textcolor211"><span 
+class="pcrr7t-x-x-90">cd</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;deployment/</span> 
+<a 
+ id="x7-50015r7"></a> 
+<a 
+ id="x7-50017r8"></a><span id="textcolor212"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;fill</span><span 
 class="pcrr7t-x-x-90">&#x00A0;it</span><span 
@@ -376,22 +359,19 @@ class="pcrr7t-x-x-90">&#x00A0;with</span><span
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
 class="pcrr7t-x-x-90">&#x00A0;directories</span><span 
 class="pcrr7t-x-x-90">&#x00A0;we</span><span 
-class="pcrr7t-x-x-90">&#x00A0;need</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;need</span></span> 
+<a 
  id="x7-50019r9"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;mkdir</span><span 
+class="pcrr7t-x-x-90">mkdir</span><span 
 class="pcrr7t-x-x-90">&#x00A0;run</span><span 
 class="pcrr7t-x-x-90">&#x00A0;tmp</span><span 
 class="pcrr7t-x-x-90">&#x00A0;logs</span><span 
 class="pcrr7t-x-x-90">&#x00A0;static</span><span 
-class="pcrr7t-x-x-90">&#x00A0;profiles</span>
-<br class="fancyvrb" /><a 
- id="x7-50021r10"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-50023r11"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor213"><span 
+class="pcrr7t-x-x-90">&#x00A0;profiles</span> 
+<a 
+ id="x7-50021r10"></a> 
+<a 
+ id="x7-50023r11"></a><span id="textcolor213"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;Note:</span><span 
 class="pcrr7t-x-x-90">&#x00A0;On</span><span 
@@ -402,11 +382,9 @@ class="pcrr7t-x-x-90">&#x00A0;needs</span><span
 class="pcrr7t-x-x-90">&#x00A0;access</span><span 
 class="pcrr7t-x-x-90">&#x00A0;to</span><span 
 class="pcrr7t-x-x-90">&#x00A0;/proc</span><span 
-class="pcrr7t-x-x-90">&#x00A0;from</span></span>
-<br class="fancyvrb" /><a 
- id="x7-50025r12"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor214"><span 
+class="pcrr7t-x-x-90">&#x00A0;from</span></span> 
+<a 
+ id="x7-50025r12"></a><span id="textcolor214"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
 class="pcrr7t-x-x-90">&#x00A0;chroot</span><span 
@@ -418,11 +396,9 @@ class="pcrr7t-x-x-90">&#x00A0;command</span><span
 class="pcrr7t-x-x-90">&#x00A0;should</span><span 
 class="pcrr7t-x-x-90">&#x00A0;do</span><span 
 class="pcrr7t-x-x-90">&#x00A0;it</span><span 
-class="pcrr7t-x-x-90">&#x00A0;(make</span></span>
-<br class="fancyvrb" /><a 
- id="x7-50027r13"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor215"><span 
+class="pcrr7t-x-x-90">&#x00A0;(make</span></span> 
+<a 
+ id="x7-50027r13"></a><span id="textcolor215"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;sure</span><span 
 class="pcrr7t-x-x-90">&#x00A0;you</span><span 
@@ -432,11 +408,9 @@ class="pcrr7t-x-x-90">&#x00A0;at</span><span
 class="pcrr7t-x-x-90">&#x00A0;boot</span><span 
 class="pcrr7t-x-x-90">&#x00A0;time</span><span 
 class="pcrr7t-x-x-90">&#x00A0;as</span><span 
-class="pcrr7t-x-x-90">&#x00A0;well):</span></span>
-<br class="fancyvrb" /><a 
- id="x7-50029r14"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor216"><span 
+class="pcrr7t-x-x-90">&#x00A0;well):</span></span> 
+<a 
+ id="x7-50029r14"></a><span id="textcolor216"><span 
 class="pcrr7t-x-x-90">##</span><span 
 class="pcrr7t-x-x-90">&#x00A0;mkdir</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-p</span><span 
@@ -446,14 +420,11 @@ class="pcrr7t-x-x-90">&#x00A0;sudo</span><span
 class="pcrr7t-x-x-90">&#x00A0;mount</span><span 
 class="pcrr7t-x-x-90">&#x00A0;--bind</span><span 
 class="pcrr7t-x-x-90">&#x00A0;/proc</span><span 
-class="pcrr7t-x-x-90">&#x00A0;proc</span></span><br class="fancyvrb" /><a 
- id="x7-50031r15"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span>
-<br class="fancyvrb" /><a 
- id="x7-50033r16"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor217"><span 
+class="pcrr7t-x-x-90">&#x00A0;proc</span></span> 
+<a 
+ id="x7-50031r15"></a> 
+<a 
+ id="x7-50033r16"></a><span id="textcolor217"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;create</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
@@ -462,34 +433,27 @@ class="pcrr7t-x-x-90">&#x00A0;profile</span><span
 class="pcrr7t-x-x-90">&#x00A0;dirs</span><span 
 class="pcrr7t-x-x-90">&#x00A0;for</span><span 
 class="pcrr7t-x-x-90">&#x00A0;each</span><span 
-class="pcrr7t-x-x-90">&#x00A0;thing</span></span><br class="fancyvrb" /><a 
- id="x7-50035r17"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor218"><span 
-class="pcrr7t-x-x-90">cd</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">profiles/</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;thing</span></span> 
+<a 
+ id="x7-50035r17"></a><span id="textcolor218"><span 
+class="pcrr7t-x-x-90">cd</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;profiles/</span> 
+<a 
  id="x7-50037r18"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;mkdir</span><span 
+class="pcrr7t-x-x-90">mkdir</span><span 
 class="pcrr7t-x-x-90">&#x00A0;chat</span><span 
 class="pcrr7t-x-x-90">&#x00A0;mp3stream</span><span 
 class="pcrr7t-x-x-90">&#x00A0;handlertest</span><span 
 class="pcrr7t-x-x-90">&#x00A0;web</span><span 
-class="pcrr7t-x-x-90">&#x00A0;mongrel2</span><br class="fancyvrb" /><a 
- id="x7-50039r19"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor219"><span 
+class="pcrr7t-x-x-90">&#x00A0;mongrel2</span> 
+<a 
+ id="x7-50039r19"></a><span id="textcolor219"><span 
 class="pcrr7t-x-x-90">cd</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;..</span><br class="fancyvrb" /><a 
- id="x7-50041r20"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span>
-<br class="fancyvrb" /><a 
- id="x7-50043r21"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor220"><span 
+class="pcrr7t-x-x-90">&#x00A0;..</span> 
+<a 
+ id="x7-50041r20"></a> 
+<a 
+ id="x7-50043r21"></a><span id="textcolor220"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;copy</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
@@ -499,44 +463,38 @@ class="pcrr7t-x-x-90">&#x00A0;from</span><span
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
 class="pcrr7t-x-x-90">&#x00A0;source</span><span 
 class="pcrr7t-x-x-90">&#x00A0;to</span><span 
-class="pcrr7t-x-x-90">&#x00A0;here</span></span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;here</span></span> 
+<a 
  id="x7-50045r22"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;cp</span><span 
-class="pcrr7t-x-x-90">&#x00A0;~/mongrel2/examples/configs/mongrel2.conf</span><span 
-class="pcrr7t-x-x-90">&#x00A0;mongrel2.conf</span><br class="fancyvrb" /><a 
- id="x7-50047r23"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span>
-<br class="fancyvrb" /><a 
- id="x7-50049r24"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor221"><span 
+class="pcrr7t-x-x-90">cp</span><span 
+class="pcrr7t-x-x-90">&#x00A0;&#x02DC;/mongrel2/examples/configs/mongrel2.conf</span><span 
+class="pcrr7t-x-x-90">&#x00A0;mongrel2.conf</span> 
+<a 
+ id="x7-50047r23"></a> 
+<a 
+ id="x7-50049r24"></a><span id="textcolor221"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;setup</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
 class="pcrr7t-x-x-90">&#x00A0;mongrel2</span><span 
 class="pcrr7t-x-x-90">&#x00A0;database</span><span 
-class="pcrr7t-x-x-90">&#x00A0;initially</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;initially</span></span> 
+<a 
  id="x7-50051r25"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;m2sh</span><span 
-class="pcrr7t-x-x-90">&#x00A0;load</span><br class="fancyvrb" /><a 
- id="x7-50053r26"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-50055r27"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor222"><span 
+class="pcrr7t-x-x-90">m2sh</span><span 
+class="pcrr7t-x-x-90">&#x00A0;load</span> 
+<a 
+ id="x7-50053r26"></a> 
+<a 
+ id="x7-50055r27"></a><span id="textcolor222"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;see</span><span 
 class="pcrr7t-x-x-90">&#x00A0;our</span><span 
 class="pcrr7t-x-x-90">&#x00A0;end</span><span 
-class="pcrr7t-x-x-90">&#x00A0;results</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;results</span></span> 
+<a 
  id="x7-50057r28"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ls</span></div>
+class="pcrr7t-x-x-90">ls</span></pre>
                                                                   
 
                                                                   
@@ -550,7 +508,7 @@ create deployment directories like this automatically.
      <ol  class="enumerate1" >
      <li 
   class="enumerate" id="x7-50059x1">Setup a <span 
-class="pcrb7t-">~/deployment </span>directory we&#8217;ll put everything in.
+class="pcrb7t-">&#x02DC;/deployment </span>directory we&#8217;ll put everything in.
      </li>
      <li 
   class="enumerate" id="x7-50061x2">Created <span 
@@ -601,12 +559,12 @@ class="pcrro7t-">base </span>of <span
 class="pcrro7t-">chat</span><span 
 class="pcrro7t-">_demo</span><span 
 class="pcrro7t-">_dir </span>to <span 
-class="pcrb7t-">'static/chatdemo/'</span>, which
+class="pcrb7t-">&#8217;static/chatdemo/&#8217;</span>, which
      we&#8217;ll setup at the end.
+     </li>
                                                                   
 
                                                                   
-     </li>
      <li 
   class="enumerate" id="x7-51006x3">Modify the server <span 
 class="pcrro7t-">chroot </span>so that it&#8217;s <span 
@@ -652,48 +610,44 @@ class="content">                                                                
 class="pplri7t-">Testing The Initial</span>
 <span 
 class="pplri7t-">Configuration</span></span></div><!--tex4ht:label?: x7-51013r21 -->
-<div class="fancyvrb" id="fancyvrb15"><a 
+<pre class="fancyvrb" id="fancyvrb15"><a 
  id="x7-51015r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;m2sh</span><span 
+class="pcrr7t-x-x-90">m2sh</span><span 
 class="pcrr7t-x-x-90">&#x00A0;start</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-db</span><span 
 class="pcrr7t-x-x-90">&#x00A0;config.sqlite</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-host</span><span 
-class="pcrr7t-x-x-90">&#x00A0;localhost</span><br class="fancyvrb" /><a 
- id="x7-51017r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor223"><span 
+class="pcrr7t-x-x-90">&#x00A0;localhost</span> 
+<a 
+ id="x7-51017r2"></a><span id="textcolor223"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;hit</span><span 
-class="pcrr7t-x-x-90">&#x00A0;^C</span><span 
+class="pcrr7t-x-x-90">&#x00A0;&#x02C6;C</span><span 
 class="pcrr7t-x-x-90">&#x00A0;to</span><span 
 class="pcrr7t-x-x-90">&#x00A0;exit</span><span 
-class="pcrr7t-x-x-90">&#x00A0;out</span></span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;out</span></span> 
+<a 
  id="x7-51019r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;m2sh</span><span 
+class="pcrr7t-x-x-90">m2sh</span><span 
 class="pcrr7t-x-x-90">&#x00A0;start</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-db</span><span 
 class="pcrr7t-x-x-90">&#x00A0;config.sqlite</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-host</span><span 
 class="pcrr7t-x-x-90">&#x00A0;localhost</span><span 
-class="pcrr7t-x-x-90">&#x00A0;-sudo</span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;-sudo</span> 
+<a 
  id="x7-51021r4"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;less</span><span 
-class="pcrr7t-x-x-90">&#x00A0;logs/error.log</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">less</span><span 
+class="pcrr7t-x-x-90">&#x00A0;logs/error.log</span> 
+<a 
  id="x7-51023r5"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;m2sh</span><span 
+class="pcrr7t-x-x-90">m2sh</span><span 
 class="pcrr7t-x-x-90">&#x00A0;stop</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-db</span><span 
 class="pcrr7t-x-x-90">&#x00A0;config.sqlite</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-host</span><span 
 class="pcrr7t-x-x-90">&#x00A0;localhost</span><span 
-class="pcrr7t-x-x-90">&#x00A0;-murder</span></div>
+class="pcrr7t-x-x-90">&#x00A0;-murder</span></pre>
                                                                   
 
                                                                   
@@ -731,19 +685,15 @@ class="content">                                                                
 class="pplri7t-">Skeleton procer</span>
 <span 
 class="pplri7t-">Setup</span></span></div><!--tex4ht:label?: x7-52001r22 -->
-<div class="fancyvrb" id="fancyvrb16"><a 
- id="x7-52003r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor224"><span 
-class="pcrr7t-x-x-90">cd</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">profiles/</span><br class="fancyvrb" /><a 
+<pre class="fancyvrb" id="fancyvrb16"><a 
+ id="x7-52003r1"></a><span id="textcolor224"><span 
+class="pcrr7t-x-x-90">cd</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;profiles/</span> 
+<a 
  id="x7-52005r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ls</span><br class="fancyvrb" /><a 
- id="x7-52007r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor225"><span 
+class="pcrr7t-x-x-90">ls</span> 
+<a 
+ id="x7-52007r3"></a><span id="textcolor225"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;should</span><span 
 class="pcrr7t-x-x-90">&#x00A0;see:</span><span 
@@ -755,74 +705,61 @@ class="pcrr7t-x-x-90">&#x00A0;mongrel2</span><span
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;mp3stream</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;web</span></span>
-<br class="fancyvrb" /><a 
- id="x7-52009r4"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-52011r5"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor226"><span 
+class="pcrr7t-x-x-90">&#x00A0;web</span></span> 
+<a 
+ id="x7-52009r4"></a> 
+<a 
+ id="x7-52011r5"></a><span id="textcolor226"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;make</span><span 
 class="pcrr7t-x-x-90">&#x00A0;all</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
 class="pcrr7t-x-x-90">&#x00A0;restart</span><span 
-class="pcrr7t-x-x-90">&#x00A0;settings</span></span><br class="fancyvrb" /><a 
- id="x7-52013r6"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor227"><span 
-class="pcrb7t-x-x-90">for</span><span 
-class="pcrb7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">i</span><span 
-class="pcrr7t-x-x-90">&#x00A0;in</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x22C6;;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;settings</span></span> 
+<a 
+ id="x7-52013r6"></a><span id="textcolor227"><span 
+class="pcrb7t-x-x-90">for</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;i</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor228"><span 
-class="pcrb7t-x-x-90">do</span><span 
-class="pcrb7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">touch</span><span 
+class="pcrb7t-x-x-90">in</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;*;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor229"><span 
+class="pcrb7t-x-x-90">do</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;touch</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor230"><span 
 class="pcrr7t-x-x-90">$i</span></span><span 
 class="pcrr7t-x-x-90">/restart;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor230"><span 
-class="pcrb7t-x-x-90">done</span></span><br class="fancyvrb" /><a 
- id="x7-52015r7"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span>
-<br class="fancyvrb" /><a 
- id="x7-52017r8"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor231"><span 
+class="pcrb7t-x-x-90">done</span></span> 
+<a 
+ id="x7-52015r7"></a> 
+<a 
+ id="x7-52017r8"></a><span id="textcolor232"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;make</span><span 
 class="pcrr7t-x-x-90">&#x00A0;all</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
 class="pcrr7t-x-x-90">&#x00A0;empty</span><span 
-class="pcrr7t-x-x-90">&#x00A0;dependencies</span></span><br class="fancyvrb" /><a 
- id="x7-52019r9"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor232"><span 
-class="pcrb7t-x-x-90">for</span><span 
-class="pcrb7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">i</span><span 
-class="pcrr7t-x-x-90">&#x00A0;in</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x22C6;;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor233"><span 
-class="pcrb7t-x-x-90">do</span><span 
-class="pcrb7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">touch</span><span 
+class="pcrr7t-x-x-90">&#x00A0;dependencies</span></span> 
+<a 
+ id="x7-52019r9"></a><span id="textcolor233"><span 
+class="pcrb7t-x-x-90">for</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;i</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor234"><span 
+class="pcrb7t-x-x-90">in</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;*;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor235"><span 
+class="pcrb7t-x-x-90">do</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;touch</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor236"><span 
 class="pcrr7t-x-x-90">$i</span></span><span 
 class="pcrr7t-x-x-90">/depends;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor235"><span 
-class="pcrb7t-x-x-90">done</span></span>
-<br class="fancyvrb" /><a 
- id="x7-52021r10"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-52023r11"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor236"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor237"><span 
+class="pcrb7t-x-x-90">done</span></span> 
+<a 
+ id="x7-52021r10"></a> 
+<a 
+ id="x7-52023r11"></a><span id="textcolor238"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;setup</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
@@ -831,44 +768,39 @@ class="pcrr7t-x-x-90">&#x00A0;to</span><span
 class="pcrr7t-x-x-90">&#x00A0;some</span><span 
 class="pcrr7t-x-x-90">&#x00A0;sort</span><span 
 class="pcrr7t-x-x-90">&#x00A0;of</span><span 
-class="pcrr7t-x-x-90">&#x00A0;default</span></span>
-<br class="fancyvrb" /><a 
- id="x7-52025r12"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor237"><span 
-class="pcrb7t-x-x-90">for</span><span 
-class="pcrb7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">i</span><span 
-class="pcrr7t-x-x-90">&#x00A0;in</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x22C6;;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor238"><span 
-class="pcrb7t-x-x-90">do</span><span 
-class="pcrb7t-x-x-90">&#x00A0;</span></span><span id="textcolor239"><span 
-class="pcrr7t-x-x-90">echo</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;default</span></span> 
+<a 
+ id="x7-52025r12"></a><span id="textcolor239"><span 
+class="pcrb7t-x-x-90">for</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;i</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor240"><span 
+class="pcrb7t-x-x-90">in</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;*;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor241"><span 
+class="pcrb7t-x-x-90">do</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor242"><span 
+class="pcrr7t-x-x-90">echo</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor243"><span 
 class="pcrr7t-x-x-90">$PWD</span></span><span 
-class="pcrr7t-x-x-90">/</span><span id="textcolor241"><span 
+class="pcrr7t-x-x-90">/</span><span id="textcolor244"><span 
 class="pcrr7t-x-x-90">$i</span></span><span 
-class="pcrr7t-x-x-90">/</span><span id="textcolor242"><span 
+class="pcrr7t-x-x-90">/</span><span id="textcolor245"><span 
 class="pcrr7t-x-x-90">$i</span></span><span 
 class="pcrr7t-x-x-90">.pid</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor243"><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor246"><span 
 class="pcrr7t-x-x-90">$i</span></span><span 
 class="pcrr7t-x-x-90">/pid_file;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor244"><span 
-class="pcrb7t-x-x-90">done</span></span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor247"><span 
+class="pcrb7t-x-x-90">done</span></span> 
+<a 
  id="x7-52027r13"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;cat</span><span 
-class="pcrr7t-x-x-90">&#x00A0;chat/pid_file</span><br class="fancyvrb" /><a 
- id="x7-52029r14"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-52031r15"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor245"><span 
+class="pcrr7t-x-x-90">cat</span><span 
+class="pcrr7t-x-x-90">&#x00A0;chat/pid_file</span> 
+<a 
+ id="x7-52029r14"></a> 
+<a 
+ id="x7-52031r15"></a><span id="textcolor248"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;get</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
@@ -877,64 +809,57 @@ class="pcrr7t-x-x-90">&#x00A0;script</span><span
 class="pcrr7t-x-x-90">&#x00A0;setup</span><span 
 class="pcrr7t-x-x-90">&#x00A0;to</span><span 
 class="pcrr7t-x-x-90">&#x00A0;do</span><span 
-class="pcrr7t-x-x-90">&#x00A0;nothing</span></span>
-<br class="fancyvrb" /><a 
- id="x7-52033r16"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor246"><span 
-class="pcrb7t-x-x-90">for</span><span 
-class="pcrb7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">i</span><span 
-class="pcrr7t-x-x-90">&#x00A0;in</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x22C6;;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor247"><span 
-class="pcrb7t-x-x-90">do</span><span 
-class="pcrb7t-x-x-90">&#x00A0;</span></span><span id="textcolor248"><span 
+class="pcrr7t-x-x-90">&#x00A0;nothing</span></span> 
+<a 
+ id="x7-52033r16"></a><span id="textcolor249"><span 
+class="pcrb7t-x-x-90">for</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;i</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor250"><span 
+class="pcrb7t-x-x-90">in</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;*;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor251"><span 
+class="pcrb7t-x-x-90">do</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor252"><span 
 class="pcrr7t-x-x-90">echo</span></span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="colorbox" id="colorbox249"><span id="textcolor250"><span 
-class="pcrr7t-x-x-90">'#!/bin/sh'</span></span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor251"><span 
-class="pcrr7t-x-x-90">$i</span></span><span 
-class="pcrr7t-x-x-90">/run;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor252"><span 
-class="pcrb7t-x-x-90">done</span></span>
-<br class="fancyvrb" /><a 
- id="x7-52035r17"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor253"><span 
-class="pcrb7t-x-x-90">for</span><span 
-class="pcrb7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">i</span><span 
-class="pcrr7t-x-x-90">&#x00A0;in</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x22C6;;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor254"><span 
-class="pcrb7t-x-x-90">do</span><span 
-class="pcrb7t-x-x-90">&#x00A0;</span></span><span 
-class="pcrr7t-x-x-90">chmod</span><span 
-class="pcrr7t-x-x-90">&#x00A0;u+x</span><span 
+class="colorbox" id="colorbox253"><span id="textcolor254"><span 
+class="pcrr7t-x-x-90">&#8217;#!/bin/sh&#8217;</span></span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor255"><span 
 class="pcrr7t-x-x-90">$i</span></span><span 
 class="pcrr7t-x-x-90">/run;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor256"><span 
-class="pcrb7t-x-x-90">done</span></span><br class="fancyvrb" /><a 
- id="x7-52037r18"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-52039r19"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor257"><span 
+class="pcrb7t-x-x-90">done</span></span> 
+<a 
+ id="x7-52035r17"></a><span id="textcolor257"><span 
+class="pcrb7t-x-x-90">for</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;i</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor258"><span 
+class="pcrb7t-x-x-90">in</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;*;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor259"><span 
+class="pcrb7t-x-x-90">do</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;chmod</span><span 
+class="pcrr7t-x-x-90">&#x00A0;u+x</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor260"><span 
+class="pcrr7t-x-x-90">$i</span></span><span 
+class="pcrr7t-x-x-90">/run;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor261"><span 
+class="pcrb7t-x-x-90">done</span></span> 
+<a 
+ id="x7-52037r18"></a> 
+<a 
+ id="x7-52039r19"></a><span id="textcolor262"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;check</span><span 
 class="pcrr7t-x-x-90">&#x00A0;out</span><span 
 class="pcrr7t-x-x-90">&#x00A0;what</span><span 
 class="pcrr7t-x-x-90">&#x00A0;we</span><span 
-class="pcrr7t-x-x-90">&#x00A0;did</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;did</span></span> 
+<a 
  id="x7-52041r20"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ls</span><span 
-class="pcrr7t-x-x-90">&#x00A0;-lR</span></div>
+class="pcrr7t-x-x-90">ls</span><span 
+class="pcrr7t-x-x-90">&#x00A0;-lR</span></pre>
                                                                   
 
                                                                   
@@ -942,20 +867,19 @@ class="pcrr7t-x-x-90">&#x00A0;-lR</span></div>
 <!--l. 309--><p class="noindent" >With all of that, you can then try to run <span 
 class="pcrro7t-">procer </span>to watch it fail but still try to run
 everything:
-<div class="fancyvrb" id="fancyvrb17"><a 
+<pre class="fancyvrb" id="fancyvrb17"><a 
  id="x7-52043r1"></a><span 
-class="pcrr7t-">&#x00A0;</span><span 
-class="pcrr7t-">&#x00A0;sudo</span><span 
+class="pcrr7t-">sudo</span><span 
 class="pcrr7t-">&#x00A0;procer</span><span 
-class="pcrr7t-">&#x00A0;</span><span id="textcolor258"><span 
+class="pcrr7t-">&#x00A0;</span><span id="textcolor263"><span 
 class="pcrr7t-">$PWD</span></span><span 
-class="pcrr7t-">&#x00A0;</span><span id="textcolor259"><span 
+class="pcrr7t-">&#x00A0;</span><span id="textcolor264"><span 
 class="pcrr7t-">$PWD</span></span><span 
-class="pcrr7t-">/../run/procer.pid</span><br class="fancyvrb" /><a 
+class="pcrr7t-">/../run/procer.pid</span> 
+<a 
  id="x7-52045r2"></a><span 
-class="pcrr7t-">&#x00A0;</span><span 
-class="pcrr7t-">&#x00A0;less</span><span 
-class="pcrr7t-">&#x00A0;error.log</span></div>
+class="pcrr7t-">less</span><span 
+class="pcrr7t-">&#x00A0;error.log</span></pre>
 <!--l. 318--><p class="noindent" >This is assuming that you are still in the <span 
 class="pcrb7t-">profiles </span>directory. You should see the file
 <span 
@@ -1215,7 +1139,7 @@ class="pcrr7t-x-x-90">&#x00A0;</span><span
 class="pcrr7t-x-x-90">chat</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">didn</span><span 
-class="pcrr8c-x-x-90">&#8217;</span><span 
+class="pcrr8c-x-x-90"></span><span 
 class="pcrr7t-x-x-90">t</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">make</span><span 
@@ -1288,34 +1212,28 @@ class="content">                                                                
 class="pplri7t-">procer Config For</span>
 <span 
 class="pplri7t-">Mongrel2</span></span></div><!--tex4ht:label?: x7-52069r24 -->
-<div class="fancyvrb" id="fancyvrb18"><a 
- id="x7-52071r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor260"><span 
+<pre class="fancyvrb" id="fancyvrb18"><a 
+ id="x7-52071r1"></a><span id="textcolor265"><span 
 class="pcrr7t-x-x-90">cd</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;~/deployment</span><br class="fancyvrb" /><a 
- id="x7-52073r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor261"><span 
+class="pcrr7t-x-x-90">&#x00A0;&#x02DC;/deployment</span> 
+<a 
+ id="x7-52073r2"></a><span id="textcolor266"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;make</span><span 
 class="pcrr7t-x-x-90">&#x00A0;mongrel2</span><span 
 class="pcrr7t-x-x-90">&#x00A0;run</span><span 
 class="pcrr7t-x-x-90">&#x00A0;as</span><span 
-class="pcrr7t-x-x-90">&#x00A0;root</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;root</span></span> 
+<a 
  id="x7-52075r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;sudo</span><span 
+class="pcrr7t-x-x-90">sudo</span><span 
 class="pcrr7t-x-x-90">&#x00A0;chown</span><span 
 class="pcrr7t-x-x-90">&#x00A0;root.root</span><span 
-class="pcrr7t-x-x-90">&#x00A0;profiles/mongrel2</span>
-<br class="fancyvrb" /><a 
- id="x7-52077r4"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-52079r5"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor262"><span 
+class="pcrr7t-x-x-90">&#x00A0;profiles/mongrel2</span> 
+<a 
+ id="x7-52077r4"></a> 
+<a 
+ id="x7-52079r5"></a><span id="textcolor267"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;tell</span><span 
 class="pcrr7t-x-x-90">&#x00A0;procer</span><span 
@@ -1323,35 +1241,34 @@ class="pcrr7t-x-x-90">&#x00A0;where</span><span
 class="pcrr7t-x-x-90">&#x00A0;mongrel2</span><span 
 class="pcrr7t-x-x-90">&#x00A0;puts</span><span 
 class="pcrr7t-x-x-90">&#x00A0;its</span><span 
-class="pcrr7t-x-x-90">&#x00A0;pid_file</span></span><br class="fancyvrb" /><a 
- id="x7-52081r6"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor263"><span 
+class="pcrr7t-x-x-90">&#x00A0;pid_file</span></span> 
+<a 
+ id="x7-52081r6"></a><span id="textcolor268"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;notice</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;not</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;&#x003E;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;&gt;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;on</span><span 
-class="pcrr7t-x-x-90">&#x00A0;this</span></span>
-<br class="fancyvrb" /><a 
- id="x7-52083r7"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor264"><span 
+class="pcrr7t-x-x-90">&#x00A0;this</span></span> 
+<a 
+ id="x7-52083r7"></a><span id="textcolor269"><span 
 class="pcrr7t-x-x-90">echo</span></span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="colorbox" id="colorbox265"><span id="textcolor266"><span 
-class="pcrr7t-x-x-90">"$PWD/run/mongrel2.pid"</span></span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;profiles/mongrel2/pid_file</span><br class="fancyvrb" /><a 
- id="x7-52085r8"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span>
-<br class="fancyvrb" /><a 
- id="x7-52087r9"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor267"><span 
+class="colorbox" id="colorbox270"><span id="textcolor271"><span 
+class="pcrr7t-x-x-90">"</span></span></span><span id="textcolor272"><span 
+class="pcrr7t-x-x-90">$PWD</span></span><span 
+class="colorbox" id="colorbox273"><span id="textcolor274"><span 
+class="pcrr7t-x-x-90">/run/mongrel2.pid</span></span></span><span 
+class="colorbox" id="colorbox275"><span id="textcolor276"><span 
+class="pcrr7t-x-x-90">"</span></span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;profiles/mongrel2/pid_file</span> 
+<a 
+ id="x7-52085r8"></a> 
+<a 
+ id="x7-52087r9"></a><span id="textcolor277"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;make</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
@@ -1361,69 +1278,64 @@ class="pcrr7t-x-x-90">&#x00A0;start</span><span
 class="pcrr7t-x-x-90">&#x00A0;mongrel2</span><span 
 class="pcrr7t-x-x-90">&#x00A0;(notice</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;&#x003E;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;&gt;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;on</span><span 
-class="pcrr7t-x-x-90">&#x00A0;this)</span></span>
-<br class="fancyvrb" /><a 
- id="x7-52089r10"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor268"><span 
+class="pcrr7t-x-x-90">&#x00A0;this)</span></span> 
+<a 
+ id="x7-52089r10"></a><span id="textcolor278"><span 
 class="pcrr7t-x-x-90">echo</span></span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="colorbox" id="colorbox269"><span id="textcolor270"><span 
-class="pcrr7t-x-x-90">"cd</span><span 
-class="pcrr7t-x-x-90">&#x00A0;$PWD"</span></span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;&#x003E;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;profiles/mongrel2/run</span>
-<br class="fancyvrb" /><a 
- id="x7-52091r11"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor271"><span 
+class="colorbox" id="colorbox279"><span id="textcolor280"><span 
+class="pcrr7t-x-x-90">"</span></span></span><span 
+class="colorbox" id="colorbox281"><span id="textcolor282"><span 
+class="pcrr7t-x-x-90">cd</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span></span></span><span id="textcolor283"><span 
+class="pcrr7t-x-x-90">$PWD</span></span><span 
+class="colorbox" id="colorbox284"><span id="textcolor285"><span 
+class="pcrr7t-x-x-90">"</span></span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;&gt;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;profiles/mongrel2/run</span> 
+<a 
+ id="x7-52091r11"></a><span id="textcolor286"><span 
 class="pcrr7t-x-x-90">echo</span></span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="colorbox" id="colorbox272"><span id="textcolor273"><span 
+class="colorbox" id="colorbox287"><span id="textcolor288"><span 
 class="pcrr7t-x-x-90">"m2sh</span><span 
 class="pcrr7t-x-x-90">&#x00A0;start</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-db</span><span 
 class="pcrr7t-x-x-90">&#x00A0;config.sqlite</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-host</span><span 
 class="pcrr7t-x-x-90">&#x00A0;localhost"</span></span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;&#x003E;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;profiles/mongrel2/run</span>
-<br class="fancyvrb" /><a 
- id="x7-52093r12"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-52095r13"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor274"><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;&gt;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;profiles/mongrel2/run</span> 
+<a 
+ id="x7-52093r12"></a> 
+<a 
+ id="x7-52095r13"></a><span id="textcolor289"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;check</span><span 
 class="pcrr7t-x-x-90">&#x00A0;out</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
-class="pcrr7t-x-x-90">&#x00A0;results</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;results</span></span> 
+<a 
  id="x7-52097r14"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;cat</span><span 
-class="pcrr7t-x-x-90">&#x00A0;profiles/mongrel2/run</span><br class="fancyvrb" /><a 
- id="x7-52099r15"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor275"><span 
-class="pcrr7t-x-x-90">#!/bin/sh</span></span>
-<br class="fancyvrb" /><a 
- id="x7-52101r16"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor276"><span 
+class="pcrr7t-x-x-90">cat</span><span 
+class="pcrr7t-x-x-90">&#x00A0;profiles/mongrel2/run</span> 
+<a 
+ id="x7-52099r15"></a><span id="textcolor290"><span 
+class="pcrr7t-x-x-90">#!/bin/sh</span></span> 
+<a 
+ id="x7-52101r16"></a><span id="textcolor291"><span 
 class="pcrr7t-x-x-90">cd</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;/home/YOU/deployment</span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;/home/YOU/deployment</span> 
+<a 
  id="x7-52103r17"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;m2sh</span><span 
+class="pcrr7t-x-x-90">m2sh</span><span 
 class="pcrr7t-x-x-90">&#x00A0;start</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-db</span><span 
 class="pcrr7t-x-x-90">&#x00A0;config.sqlite</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-host</span><span 
-class="pcrr7t-x-x-90">&#x00A0;localhost</span></div>
+class="pcrr7t-x-x-90">&#x00A0;localhost</span></pre>
                                                                   
 
                                                                   
@@ -1449,79 +1361,66 @@ class="content">                                                                
 class="pplri7t-">Using procer To Run</span>
 <span 
 class="pplri7t-">Mongrel2</span></span></div><!--tex4ht:label?: x7-52104r25 -->
-<div class="fancyvrb" id="fancyvrb19"><a 
- id="x7-52106r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor277"><span 
+<pre class="fancyvrb" id="fancyvrb19"><a 
+ id="x7-52106r1"></a><span id="textcolor292"><span 
 class="pcrr7t-x-x-90">cd</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;~/deployment</span><br class="fancyvrb" /><a 
- id="x7-52108r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor278"><span 
+class="pcrr7t-x-x-90">&#x00A0;&#x02DC;/deployment</span> 
+<a 
+ id="x7-52108r2"></a><span id="textcolor293"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;clear</span><span 
 class="pcrr7t-x-x-90">&#x00A0;out</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
 class="pcrr7t-x-x-90">&#x00A0;error.log</span><span 
 class="pcrr7t-x-x-90">&#x00A0;for</span><span 
-class="pcrr7t-x-x-90">&#x00A0;testing</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;testing</span></span> 
+<a 
  id="x7-52110r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;rm</span><span 
-class="pcrr7t-x-x-90">&#x00A0;profiles/error.log</span>
-<br class="fancyvrb" /><a 
- id="x7-52112r4"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-52114r5"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor279"><span 
+class="pcrr7t-x-x-90">rm</span><span 
+class="pcrr7t-x-x-90">&#x00A0;profiles/error.log</span> 
+<a 
+ id="x7-52112r4"></a> 
+<a 
+ id="x7-52114r5"></a><span id="textcolor294"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;start</span><span 
-class="pcrr7t-x-x-90">&#x00A0;procer</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;procer</span></span> 
+<a 
  id="x7-52116r6"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;sudo</span><span 
+class="pcrr7t-x-x-90">sudo</span><span 
 class="pcrr7t-x-x-90">&#x00A0;procer</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor280"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor295"><span 
 class="pcrr7t-x-x-90">$PWD</span></span><span 
 class="pcrr7t-x-x-90">/profiles</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor281"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor296"><span 
 class="pcrr7t-x-x-90">$PWD</span></span><span 
-class="pcrr7t-x-x-90">/procer.pid</span><br class="fancyvrb" /><a 
- id="x7-52118r7"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span>
-<br class="fancyvrb" /><a 
- id="x7-52120r8"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor282"><span 
+class="pcrr7t-x-x-90">/procer.pid</span> 
+<a 
+ id="x7-52118r7"></a> 
+<a 
+ id="x7-52120r8"></a><span id="textcolor297"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;see</span><span 
 class="pcrr7t-x-x-90">&#x00A0;if</span><span 
 class="pcrr7t-x-x-90">&#x00A0;procer</span><span 
 class="pcrr7t-x-x-90">&#x00A0;is</span><span 
-class="pcrr7t-x-x-90">&#x00A0;running</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;running</span></span> 
+<a 
  id="x7-52122r9"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ps</span><span 
+class="pcrr7t-x-x-90">ps</span><span 
 class="pcrr7t-x-x-90">&#x00A0;ax</span><span 
 class="pcrr7t-x-x-90">&#x00A0;|</span><span 
 class="pcrr7t-x-x-90">&#x00A0;grep</span><span 
-class="pcrr7t-x-x-90">&#x00A0;procer</span><br class="fancyvrb" /><a 
- id="x7-52124r10"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-52126r11"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor283"><span 
+class="pcrr7t-x-x-90">&#x00A0;procer</span> 
+<a 
+ id="x7-52124r10"></a> 
+<a 
+ id="x7-52126r11"></a><span id="textcolor298"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;should</span><span 
-class="pcrr7t-x-x-90">&#x00A0;see:</span></span>
-<br class="fancyvrb" /><a 
- id="x7-52128r12"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor284"><span 
+class="pcrr7t-x-x-90">&#x00A0;see:</span></span> 
+<a 
+ id="x7-52128r12"></a><span id="textcolor299"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;17934</span><span 
 class="pcrr7t-x-x-90">&#x00A0;?</span><span 
@@ -1540,40 +1439,33 @@ class="pcrr7t-x-x-90">&#x00A0;</span><span
 class="pcrr7t-x-x-90">&#x00A0;0:00</span><span 
 class="pcrr7t-x-x-90">&#x00A0;procer</span><span 
 class="pcrr7t-x-x-90">&#x00A0;/home/zedshaw/deployment/profiles</span><span 
-class="pcrr7t-x-x-90">&#x00A0;/home/zedshaw/deployment/procer.pid</span></span>
-<br class="fancyvrb" /><a 
- id="x7-52130r13"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-52132r14"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor285"><span 
+class="pcrr7t-x-x-90">&#x00A0;/home/zedshaw/deployment/procer.pid</span></span> 
+<a 
+ id="x7-52130r13"></a> 
+<a 
+ id="x7-52132r14"></a><span id="textcolor300"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;see</span><span 
 class="pcrr7t-x-x-90">&#x00A0;if</span><span 
 class="pcrr7t-x-x-90">&#x00A0;mongrel2</span><span 
 class="pcrr7t-x-x-90">&#x00A0;is</span><span 
-class="pcrr7t-x-x-90">&#x00A0;running</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;running</span></span> 
+<a 
  id="x7-52134r15"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ps</span><span 
+class="pcrr7t-x-x-90">ps</span><span 
 class="pcrr7t-x-x-90">&#x00A0;ax</span><span 
 class="pcrr7t-x-x-90">&#x00A0;|</span><span 
 class="pcrr7t-x-x-90">&#x00A0;grep</span><span 
-class="pcrr7t-x-x-90">&#x00A0;mongrel2</span><br class="fancyvrb" /><a 
- id="x7-52136r16"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-52138r17"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor286"><span 
+class="pcrr7t-x-x-90">&#x00A0;mongrel2</span> 
+<a 
+ id="x7-52136r16"></a> 
+<a 
+ id="x7-52138r17"></a><span id="textcolor301"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;should</span><span 
-class="pcrr7t-x-x-90">&#x00A0;see:</span></span>
-<br class="fancyvrb" /><a 
- id="x7-52140r18"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor287"><span 
+class="pcrr7t-x-x-90">&#x00A0;see:</span></span> 
+<a 
+ id="x7-52140r18"></a><span id="textcolor302"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;17944</span><span 
 class="pcrr7t-x-x-90">&#x00A0;?</span><span 
@@ -1591,7 +1483,7 @@ class="pcrr7t-x-x-90">&#x00A0;</span><span
 class="pcrr7t-x-x-90">&#x00A0;0:00</span><span 
 class="pcrr7t-x-x-90">&#x00A0;mongrel2</span><span 
 class="pcrr7t-x-x-90">&#x00A0;config.sqlite</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ba0019c0-9140-4f82-80ca-0f4f2e81def7</span></span></div>
+class="pcrr7t-x-x-90">&#x00A0;ba0019c0-9140-4f82-80ca-0f4f2e81def7</span></span></pre>
                                                                   
 
                                                                   
@@ -1612,7 +1504,7 @@ do this, though, we sort of have to &#8220;hack in&#8221; making them daemonize 
 PID files with a little shell script help. Let&#8217;s start with the <span 
 class="pcrro7t-">chat </span>demo and,
 assuming your mongrel2 source is in <span 
-class="pcrb7t-">~/projects/mongrel2</span>, you will change
+class="pcrb7t-">&#x02DC;/projects/mongrel2</span>, you will change
 <span 
 class="pcrb7t-">profiles/chat/run </span>to be like this:
                                                                   
@@ -1630,44 +1522,33 @@ class="content">                                                                
 class="pplri7t-">Run Script For Chat</span>
 <span 
 class="pplri7t-">Demo</span></span></div><!--tex4ht:label?: x7-53001r26 -->
-<div class="fancyvrb" id="fancyvrb20"><a 
- id="x7-53003r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor288"><span 
-class="pcrr7t-x-x-90">#!/bin/sh</span></span><br class="fancyvrb" /><a 
- id="x7-53005r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor289"><span 
+<pre class="fancyvrb" id="fancyvrb20"><a 
+ id="x7-53003r1"></a><span id="textcolor303"><span 
+class="pcrr7t-x-x-90">#!/bin/sh</span></span> 
+<a 
+ id="x7-53005r2"></a><span id="textcolor304"><span 
 class="pcrr7t-x-x-90">set</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;-e</span><br class="fancyvrb" /><a 
- id="x7-53007r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53009r4"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor290"><span 
+class="pcrr7t-x-x-90">&#x00A0;-e</span> 
+<a 
+ id="x7-53007r3"></a> 
+<a 
+ id="x7-53009r4"></a><span id="textcolor305"><span 
 class="pcrr7t-x-x-90">DEPLOY</span></span><span 
-class="pcrr7t-x-x-90">=/home/YOU/deployment</span>
-<br class="fancyvrb" /><a 
- id="x7-53011r5"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor291"><span 
+class="pcrr7t-x-x-90">=/home/YOU/deployment</span> 
+<a 
+ id="x7-53011r5"></a><span id="textcolor306"><span 
 class="pcrr7t-x-x-90">SOURCE</span></span><span 
-class="pcrr7t-x-x-90">=/home/YOU/projects/mongrel2</span><br class="fancyvrb" /><a 
- id="x7-53013r6"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53015r7"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor292"><span 
+class="pcrr7t-x-x-90">=/home/YOU/projects/mongrel2</span> 
+<a 
+ id="x7-53013r6"></a> 
+<a 
+ id="x7-53015r7"></a><span id="textcolor307"><span 
 class="pcrr7t-x-x-90">cd</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor293"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor308"><span 
 class="pcrr7t-x-x-90">$SOURCE</span></span><span 
-class="pcrr7t-x-x-90">/examples/chat</span>
-<br class="fancyvrb" /><a 
- id="x7-53017r8"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor294"><span 
+class="pcrr7t-x-x-90">/examples/chat</span> 
+<a 
+ id="x7-53017r8"></a><span id="textcolor309"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;WARNING:</span><span 
 class="pcrr7t-x-x-90">&#x00A0;on</span><span 
@@ -1675,39 +1556,39 @@ class="pcrr7t-x-x-90">&#x00A0;some</span><span
 class="pcrr7t-x-x-90">&#x00A0;systems</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
 class="pcrr7t-x-x-90">&#x00A0;nohup</span><span 
-class="pcrr7t-x-x-90">&#x00A0;doesn't</span><span 
+class="pcrr7t-x-x-90">&#x00A0;doesn&#8217;t</span><span 
 class="pcrr7t-x-x-90">&#x00A0;work,</span><span 
 class="pcrr7t-x-x-90">&#x00A0;like</span><span 
-class="pcrr7t-x-x-90">&#x00A0;OSX</span></span><br class="fancyvrb" /><a 
- id="x7-53019r9"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor295"><span 
+class="pcrr7t-x-x-90">&#x00A0;OSX</span></span> 
+<a 
+ id="x7-53019r9"></a><span id="textcolor310"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;try</span><span 
 class="pcrr7t-x-x-90">&#x00A0;running</span><span 
 class="pcrr7t-x-x-90">&#x00A0;it</span><span 
-class="pcrr7t-x-x-90">&#x00A0;without</span></span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;without</span></span> 
+<a 
  id="x7-53021r10"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;nohup</span><span 
+class="pcrr7t-x-x-90">nohup</span><span 
 class="pcrr7t-x-x-90">&#x00A0;python</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-u</span><span 
 class="pcrr7t-x-x-90">&#x00A0;chat.py</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;chat.log</span><span 
-class="pcrr7t-x-x-90">&#x00A0;2&#x003E;&amp;1</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&amp;</span><br class="fancyvrb" /><a 
- id="x7-53023r11"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor296"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor311"><span 
+class="pcrb7t-x-x-90">2</span></span><span 
+class="pcrr7t-x-x-90">&gt;&amp;</span><span id="textcolor312"><span 
+class="pcrb7t-x-x-90">1</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;&amp;</span> 
+<a 
+ id="x7-53023r11"></a><span id="textcolor313"><span 
 class="pcrr7t-x-x-90">echo</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor297"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor314"><span 
 class="pcrr7t-x-x-90">$!</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor298"><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor315"><span 
 class="pcrr7t-x-x-90">$DEPLOY</span></span><span 
-class="pcrr7t-x-x-90">/profiles/chat/chat.pid</span></div>
+class="pcrr7t-x-x-90">/profiles/chat/chat.pid</span></pre>
                                                                   
 
                                                                   
@@ -1740,23 +1621,20 @@ class="pcrr7t-">$!</span></span></span> (the PID of the last
 class="pcrb7t-">chat.pid </span>file  in  the  profile
      directory.</li></ol>
 <!--l. 465--><p class="noindent" >When you run this manually, you should see something like this:
-<div class="fancyvrb" id="fancyvrb21"><a 
+<pre class="fancyvrb" id="fancyvrb21"><a 
  id="x7-53033r1"></a><span 
-class="pcrr7t-">&#x00A0;</span><span 
-class="pcrr7t-">&#x00A0;./profiles/chat/run</span><br class="fancyvrb" /><a 
+class="pcrr7t-">./profiles/chat/run</span> 
+<a 
  id="x7-53035r2"></a><span 
-class="pcrr7t-">&#x00A0;</span><span 
-class="pcrr7t-">&#x00A0;nohup:</span><span 
+class="pcrr7t-">nohup:</span><span 
 class="pcrr7t-">&#x00A0;redirecting</span><span 
 class="pcrr7t-">&#x00A0;stderr</span><span 
 class="pcrr7t-">&#x00A0;to</span><span 
-class="pcrr7t-">&#x00A0;stdout</span>
-<br class="fancyvrb" /><a 
- id="x7-53037r3"></a><span 
-class="pcrr7t-">&#x00A0;</span><span 
-class="pcrr7t-">&#x00A0;</span><span id="textcolor299"><span 
+class="pcrr7t-">&#x00A0;stdout</span> 
+<a 
+ id="x7-53037r3"></a><span id="textcolor316"><span 
 class="pcrr7t-">#</span><span 
-class="pcrr7t-">&#x00A0;you'll</span><span 
+class="pcrr7t-">&#x00A0;you&#8217;ll</span><span 
 class="pcrr7t-">&#x00A0;only</span><span 
 class="pcrr7t-">&#x00A0;see</span><span 
 class="pcrr7t-">&#x00A0;the</span><span 
@@ -1764,24 +1642,20 @@ class="pcrr7t-">&#x00A0;above</span><span
 class="pcrr7t-">&#x00A0;if</span><span 
 class="pcrr7t-">&#x00A0;you</span><span 
 class="pcrr7t-">&#x00A0;needed</span><span 
-class="pcrr7t-">&#x00A0;nohup</span></span><br class="fancyvrb" /><a 
- id="x7-53039r4"></a><span 
-class="pcrr7t-">&#x00A0;</span><span 
-class="pcrr7t-">&#x00A0;</span><br class="fancyvrb" /><a 
+class="pcrr7t-">&#x00A0;nohup</span></span> 
+<a 
+ id="x7-53039r4"></a> 
+<a 
  id="x7-53041r5"></a><span 
-class="pcrr7t-">&#x00A0;</span><span 
-class="pcrr7t-">&#x00A0;ps</span><span 
+class="pcrr7t-">ps</span><span 
 class="pcrr7t-">&#x00A0;ax</span><span 
 class="pcrr7t-">&#x00A0;|</span><span 
 class="pcrr7t-">&#x00A0;grep</span><span 
-class="pcrr7t-">&#x00A0;chat</span><br class="fancyvrb" /><a 
- id="x7-53043r6"></a><span 
-class="pcrr7t-">&#x00A0;</span><span 
-class="pcrr7t-">&#x00A0;</span>
-<br class="fancyvrb" /><a 
- id="x7-53045r7"></a><span 
-class="pcrr7t-">&#x00A0;</span><span 
-class="pcrr7t-">&#x00A0;</span><span id="textcolor300"><span 
+class="pcrr7t-">&#x00A0;chat</span> 
+<a 
+ id="x7-53043r6"></a> 
+<a 
+ id="x7-53045r7"></a><span id="textcolor317"><span 
 class="pcrr7t-">#</span><span 
 class="pcrr7t-">&#x00A0;should</span><span 
 class="pcrr7t-">&#x00A0;see:</span><span 
@@ -1797,16 +1671,15 @@ class="pcrr7t-">&#x00A0;</span><span
 class="pcrr7t-">&#x00A0;</span><span 
 class="pcrr7t-">&#x00A0;0:00</span><span 
 class="pcrr7t-">&#x00A0;python</span><span 
-class="pcrr7t-">&#x00A0;chat.py</span></span><br class="fancyvrb" /><a 
- id="x7-53047r8"></a><span 
-class="pcrr7t-">&#x00A0;</span><span 
-class="pcrr7t-">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53049r9"></a><span 
-class="pcrr7t-">&#x00A0;</span><span 
-class="pcrr7t-">&#x00A0;</span><span id="textcolor301"><span 
+class="pcrr7t-">&#x00A0;chat.py</span></span> 
+<a 
+ id="x7-53047r8"></a> 
+<a 
+ id="x7-53049r9"></a><span id="textcolor318"><span 
 class="pcrr7t-">kill</span></span><span 
 class="pcrr7t-">&#x00A0;-TERM</span><span 
-class="pcrr7t-">&#x00A0;19305</span></div>
+class="pcrr7t-">&#x00A0;</span><span id="textcolor319"><span 
+class="pcrb7t-">19305</span></span></pre>
 <!--l. 480--><p class="noindent" >After all that, you can then try out <span 
 class="pcrro7t-">procer </span>again to see if it properly runs the chat
 demo as well as mongrel2:
@@ -1825,60 +1698,51 @@ class="content">                                                                
 class="pplri7t-">Running procer With Chat</span>
 <span 
 class="pplri7t-">Demo</span></span></div><!--tex4ht:label?: x7-53050r27 -->
-<div class="fancyvrb" id="fancyvrb22"><a 
- id="x7-53052r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor302"><span 
+<pre class="fancyvrb" id="fancyvrb22"><a 
+ id="x7-53052r1"></a><span id="textcolor320"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;run</span><span 
 class="pcrr7t-x-x-90">&#x00A0;procer</span><span 
 class="pcrr7t-x-x-90">&#x00A0;to</span><span 
 class="pcrr7t-x-x-90">&#x00A0;get</span><span 
 class="pcrr7t-x-x-90">&#x00A0;stuff</span><span 
-class="pcrr7t-x-x-90">&#x00A0;started</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;started</span></span> 
+<a 
  id="x7-53054r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;sudo</span><span 
+class="pcrr7t-x-x-90">sudo</span><span 
 class="pcrr7t-x-x-90">&#x00A0;procer</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor303"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor321"><span 
 class="pcrr7t-x-x-90">$PWD</span></span><span 
 class="pcrr7t-x-x-90">/profiles</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor304"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor322"><span 
 class="pcrr7t-x-x-90">$PWD</span></span><span 
-class="pcrr7t-x-x-90">/run/procer.pid</span>
-<br class="fancyvrb" /><a 
- id="x7-53056r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53058r4"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor305"><span 
+class="pcrr7t-x-x-90">/run/procer.pid</span> 
+<a 
+ id="x7-53056r3"></a> 
+<a 
+ id="x7-53058r4"></a><span id="textcolor323"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;see</span><span 
 class="pcrr7t-x-x-90">&#x00A0;if</span><span 
-class="pcrr7t-x-x-90">&#x00A0;it's</span><span 
+class="pcrr7t-x-x-90">&#x00A0;it&#8217;s</span><span 
 class="pcrr7t-x-x-90">&#x00A0;all</span><span 
-class="pcrr7t-x-x-90">&#x00A0;running</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;running</span></span> 
+<a 
  id="x7-53060r5"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ps</span><span 
+class="pcrr7t-x-x-90">ps</span><span 
 class="pcrr7t-x-x-90">&#x00A0;ax</span><span 
 class="pcrr7t-x-x-90">&#x00A0;|</span><span 
 class="pcrr7t-x-x-90">&#x00A0;grep</span><span 
-class="pcrr7t-x-x-90">&#x00A0;procer</span><br class="fancyvrb" /><a 
- id="x7-53062r6"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53064r7"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor306"><span 
+class="pcrr7t-x-x-90">&#x00A0;procer</span> 
+<a 
+ id="x7-53062r6"></a> 
+<a 
+ id="x7-53064r7"></a><span id="textcolor324"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;should</span><span 
-class="pcrr7t-x-x-90">&#x00A0;see:</span></span>
-<br class="fancyvrb" /><a 
- id="x7-53066r8"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor307"><span 
+class="pcrr7t-x-x-90">&#x00A0;see:</span></span> 
+<a 
+ id="x7-53066r8"></a><span id="textcolor325"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;19607</span><span 
 class="pcrr7t-x-x-90">&#x00A0;?</span><span 
@@ -1897,31 +1761,25 @@ class="pcrr7t-x-x-90">&#x00A0;</span><span
 class="pcrr7t-x-x-90">&#x00A0;0:00</span><span 
 class="pcrr7t-x-x-90">&#x00A0;procer</span><span 
 class="pcrr7t-x-x-90">&#x00A0;/home/zedshaw/deployment/profiles</span><span 
-class="pcrr7t-x-x-90">&#x00A0;/home/zedshaw/deployment/run/procer.pid</span></span>
-<br class="fancyvrb" /><a 
- id="x7-53068r9"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;/home/zedshaw/deployment/run/procer.pid</span></span> 
+<a 
+ id="x7-53068r9"></a> 
+<a 
  id="x7-53070r10"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ps</span><span 
+class="pcrr7t-x-x-90">ps</span><span 
 class="pcrr7t-x-x-90">&#x00A0;ax</span><span 
 class="pcrr7t-x-x-90">&#x00A0;|</span><span 
 class="pcrr7t-x-x-90">&#x00A0;grep</span><span 
-class="pcrr7t-x-x-90">&#x00A0;mongrel2</span><br class="fancyvrb" /><a 
- id="x7-53072r11"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53074r12"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor308"><span 
+class="pcrr7t-x-x-90">&#x00A0;mongrel2</span> 
+<a 
+ id="x7-53072r11"></a> 
+<a 
+ id="x7-53074r12"></a><span id="textcolor326"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;should</span><span 
-class="pcrr7t-x-x-90">&#x00A0;see:</span></span>
-<br class="fancyvrb" /><a 
- id="x7-53076r13"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor309"><span 
+class="pcrr7t-x-x-90">&#x00A0;see:</span></span> 
+<a 
+ id="x7-53076r13"></a><span id="textcolor327"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;19621</span><span 
 class="pcrr7t-x-x-90">&#x00A0;?</span><span 
@@ -1939,30 +1797,25 @@ class="pcrr7t-x-x-90">&#x00A0;</span><span
 class="pcrr7t-x-x-90">&#x00A0;0:00</span><span 
 class="pcrr7t-x-x-90">&#x00A0;mongrel2</span><span 
 class="pcrr7t-x-x-90">&#x00A0;config.sqlite</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ba0019c0-9140-4f82-80ca-0f4f2e81def7</span></span>
-<br class="fancyvrb" /><a 
- id="x7-53078r14"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;ba0019c0-9140-4f82-80ca-0f4f2e81def7</span></span> 
+<a 
+ id="x7-53078r14"></a> 
+<a 
  id="x7-53080r15"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ps</span><span 
+class="pcrr7t-x-x-90">ps</span><span 
 class="pcrr7t-x-x-90">&#x00A0;ax</span><span 
 class="pcrr7t-x-x-90">&#x00A0;|</span><span 
 class="pcrr7t-x-x-90">&#x00A0;grep</span><span 
-class="pcrr7t-x-x-90">&#x00A0;chat</span><br class="fancyvrb" /><a 
- id="x7-53082r16"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53084r17"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor310"><span 
+class="pcrr7t-x-x-90">&#x00A0;chat</span> 
+<a 
+ id="x7-53082r16"></a> 
+<a 
+ id="x7-53084r17"></a><span id="textcolor328"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;should</span><span 
-class="pcrr7t-x-x-90">&#x00A0;see:</span></span><br class="fancyvrb" /><a 
- id="x7-53086r18"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor311"><span 
+class="pcrr7t-x-x-90">&#x00A0;see:</span></span> 
+<a 
+ id="x7-53086r18"></a><span id="textcolor329"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;19609</span><span 
 class="pcrr7t-x-x-90">&#x00A0;?</span><span 
@@ -1980,14 +1833,11 @@ class="pcrr7t-x-x-90">&#x00A0;</span><span
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;0:00</span><span 
 class="pcrr7t-x-x-90">&#x00A0;python</span><span 
-class="pcrr7t-x-x-90">&#x00A0;chat.py</span></span><br class="fancyvrb" /><a 
- id="x7-53088r19"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span>
-<br class="fancyvrb" /><a 
- id="x7-53090r20"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor312"><span 
+class="pcrr7t-x-x-90">&#x00A0;chat.py</span></span> 
+<a 
+ id="x7-53088r19"></a> 
+<a 
+ id="x7-53090r20"></a><span id="textcolor330"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;try</span><span 
 class="pcrr7t-x-x-90">&#x00A0;killing</span><span 
@@ -1997,42 +1847,36 @@ class="pcrr7t-x-x-90">&#x00A0;see</span><span
 class="pcrr7t-x-x-90">&#x00A0;if</span><span 
 class="pcrr7t-x-x-90">&#x00A0;it</span><span 
 class="pcrr7t-x-x-90">&#x00A0;comes</span><span 
-class="pcrr7t-x-x-90">&#x00A0;back</span></span><br class="fancyvrb" /><a 
- id="x7-53092r21"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor313"><span 
+class="pcrr7t-x-x-90">&#x00A0;back</span></span> 
+<a 
+ id="x7-53092r21"></a><span id="textcolor331"><span 
 class="pcrr7t-x-x-90">kill</span></span><span 
 class="pcrr7t-x-x-90">&#x00A0;-TERM</span><span 
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="colorbox" id="colorbox314"><span id="textcolor315"><span 
+class="colorbox" id="colorbox332"><span id="textcolor333"><span 
 class="pcrr7t-x-x-90">&#8216;</span></span></span><span 
 class="pcrr7t-x-x-90">cat</span><span 
 class="pcrr7t-x-x-90">&#x00A0;profiles/chat/chat.pid</span><span 
-class="colorbox" id="colorbox316"><span id="textcolor317"><span 
-class="pcrr7t-x-x-90">&#8216;</span></span></span>
-<br class="fancyvrb" /><a 
- id="x7-53094r22"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
+class="colorbox" id="colorbox334"><span id="textcolor335"><span 
+class="pcrr7t-x-x-90">&#8216;</span></span></span> 
+<a 
+ id="x7-53094r22"></a> 
+<a 
  id="x7-53096r23"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;ps</span><span 
+class="pcrr7t-x-x-90">ps</span><span 
 class="pcrr7t-x-x-90">&#x00A0;ax</span><span 
 class="pcrr7t-x-x-90">&#x00A0;|</span><span 
 class="pcrr7t-x-x-90">&#x00A0;grep</span><span 
-class="pcrr7t-x-x-90">&#x00A0;chat</span><br class="fancyvrb" /><a 
- id="x7-53098r24"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53100r25"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor318"><span 
+class="pcrr7t-x-x-90">&#x00A0;chat</span> 
+<a 
+ id="x7-53098r24"></a> 
+<a 
+ id="x7-53100r25"></a><span id="textcolor336"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;should</span><span 
-class="pcrr7t-x-x-90">&#x00A0;see:</span></span><br class="fancyvrb" /><a 
- id="x7-53102r26"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor319"><span 
+class="pcrr7t-x-x-90">&#x00A0;see:</span></span> 
+<a 
+ id="x7-53102r26"></a><span id="textcolor337"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;19669</span><span 
 class="pcrr7t-x-x-90">&#x00A0;?</span><span 
@@ -2050,7 +1894,7 @@ class="pcrr7t-x-x-90">&#x00A0;</span><span
 class="pcrr7t-x-x-90">&#x00A0;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;0:00</span><span 
 class="pcrr7t-x-x-90">&#x00A0;python</span><span 
-class="pcrr7t-x-x-90">&#x00A0;chat.py</span></span></div>
+class="pcrr7t-x-x-90">&#x00A0;chat.py</span></span></pre>
                                                                   
 
                                                                   
@@ -2079,44 +1923,33 @@ class="pplri7t-">Remaining Run</span>
 class="pplri7t-">Scripts</span></span></div><!--tex4ht:label?: x7-53103r28 -->
 <span 
 class="pcrb7t-x-x-90">profiles/handlertest/run</span>_________________________________________
-<div class="fancyvrb" id="fancyvrb23"><a 
- id="x7-53105r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor320"><span 
-class="pcrr7t-x-x-90">#!/bin/sh</span></span><br class="fancyvrb" /><a 
- id="x7-53107r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor321"><span 
+<pre class="fancyvrb" id="fancyvrb23"><a 
+ id="x7-53105r1"></a><span id="textcolor338"><span 
+class="pcrr7t-x-x-90">#!/bin/sh</span></span> 
+<a 
+ id="x7-53107r2"></a><span id="textcolor339"><span 
 class="pcrr7t-x-x-90">set</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;-e</span><br class="fancyvrb" /><a 
- id="x7-53109r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53111r4"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor322"><span 
+class="pcrr7t-x-x-90">&#x00A0;-e</span> 
+<a 
+ id="x7-53109r3"></a> 
+<a 
+ id="x7-53111r4"></a><span id="textcolor340"><span 
 class="pcrr7t-x-x-90">DEPLOY</span></span><span 
-class="pcrr7t-x-x-90">=/home/YOU/deployment</span>
-<br class="fancyvrb" /><a 
- id="x7-53113r5"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor323"><span 
+class="pcrr7t-x-x-90">=/home/YOU/deployment</span> 
+<a 
+ id="x7-53113r5"></a><span id="textcolor341"><span 
 class="pcrr7t-x-x-90">SOURCE</span></span><span 
-class="pcrr7t-x-x-90">=/home/YOU/projects/mongrel2</span><br class="fancyvrb" /><a 
- id="x7-53115r6"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53117r7"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor324"><span 
+class="pcrr7t-x-x-90">=/home/YOU/projects/mongrel2</span> 
+<a 
+ id="x7-53115r6"></a> 
+<a 
+ id="x7-53117r7"></a><span id="textcolor342"><span 
 class="pcrr7t-x-x-90">cd</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor325"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor343"><span 
 class="pcrr7t-x-x-90">$SOURCE</span></span><span 
-class="pcrr7t-x-x-90">/examples/http_0mq</span>
-<br class="fancyvrb" /><a 
- id="x7-53119r8"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor326"><span 
+class="pcrr7t-x-x-90">/examples/http_0mq</span> 
+<a 
+ id="x7-53119r8"></a><span id="textcolor344"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;WARNING:</span><span 
 class="pcrr7t-x-x-90">&#x00A0;on</span><span 
@@ -2124,80 +1957,68 @@ class="pcrr7t-x-x-90">&#x00A0;some</span><span
 class="pcrr7t-x-x-90">&#x00A0;systems</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
 class="pcrr7t-x-x-90">&#x00A0;nohup</span><span 
-class="pcrr7t-x-x-90">&#x00A0;doesn't</span><span 
+class="pcrr7t-x-x-90">&#x00A0;doesn&#8217;t</span><span 
 class="pcrr7t-x-x-90">&#x00A0;work,</span><span 
 class="pcrr7t-x-x-90">&#x00A0;like</span><span 
-class="pcrr7t-x-x-90">&#x00A0;OSX</span></span>
-<br class="fancyvrb" /><a 
- id="x7-53121r9"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor327"><span 
+class="pcrr7t-x-x-90">&#x00A0;OSX</span></span> 
+<a 
+ id="x7-53121r9"></a><span id="textcolor345"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;try</span><span 
 class="pcrr7t-x-x-90">&#x00A0;running</span><span 
 class="pcrr7t-x-x-90">&#x00A0;it</span><span 
-class="pcrr7t-x-x-90">&#x00A0;without</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;without</span></span> 
+<a 
  id="x7-53123r10"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;nohup</span><span 
+class="pcrr7t-x-x-90">nohup</span><span 
 class="pcrr7t-x-x-90">&#x00A0;python</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-u</span><span 
 class="pcrr7t-x-x-90">&#x00A0;http.py</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;http.log</span><span 
-class="pcrr7t-x-x-90">&#x00A0;2&#x003E;&amp;1</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&amp;</span>
-<br class="fancyvrb" /><a 
- id="x7-53125r11"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor328"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor346"><span 
+class="pcrb7t-x-x-90">2</span></span><span 
+class="pcrr7t-x-x-90">&gt;&amp;</span><span id="textcolor347"><span 
+class="pcrb7t-x-x-90">1</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;&amp;</span> 
+<a 
+ id="x7-53125r11"></a><span id="textcolor348"><span 
 class="pcrr7t-x-x-90">echo</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor329"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor349"><span 
 class="pcrr7t-x-x-90">$!</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor330"><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor350"><span 
 class="pcrr7t-x-x-90">$DEPLOY</span></span><span 
-class="pcrr7t-x-x-90">/profiles/handlertest/handlertest.pid</span></div>
+class="pcrr7t-x-x-90">/profiles/handlertest/handlertest.pid</span></pre>
 <!--l. 541--><p class="noindent" ><span 
 class="pcrb7t-x-x-90">profiles/mp3stream/run</span>__________________________________________
-<div class="fancyvrb" id="fancyvrb24"><a 
- id="x7-53127r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor331"><span 
-class="pcrr7t-x-x-90">#!/bin/sh</span></span><br class="fancyvrb" /><a 
- id="x7-53129r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor332"><span 
+<pre class="fancyvrb" id="fancyvrb24"><a 
+ id="x7-53127r1"></a><span id="textcolor351"><span 
+class="pcrr7t-x-x-90">#!/bin/sh</span></span> 
+<a 
+ id="x7-53129r2"></a><span id="textcolor352"><span 
 class="pcrr7t-x-x-90">set</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;-e</span><br class="fancyvrb" /><a 
- id="x7-53131r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53133r4"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor333"><span 
+class="pcrr7t-x-x-90">&#x00A0;-e</span> 
+<a 
+ id="x7-53131r3"></a> 
+<a 
+ id="x7-53133r4"></a><span id="textcolor353"><span 
 class="pcrr7t-x-x-90">DEPLOY</span></span><span 
-class="pcrr7t-x-x-90">=/home/YOU/deployment</span>
-<br class="fancyvrb" /><a 
- id="x7-53135r5"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor334"><span 
+class="pcrr7t-x-x-90">=/home/YOU/deployment</span> 
+<a 
+ id="x7-53135r5"></a><span id="textcolor354"><span 
 class="pcrr7t-x-x-90">SOURCE</span></span><span 
-class="pcrr7t-x-x-90">=/home/YOU/projects/mongrel2</span><br class="fancyvrb" /><a 
- id="x7-53137r6"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53139r7"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor335"><span 
+class="pcrr7t-x-x-90">=/home/YOU/projects/mongrel2</span> 
+<a 
+ id="x7-53137r6"></a> 
+<a 
+ id="x7-53139r7"></a><span id="textcolor355"><span 
 class="pcrr7t-x-x-90">cd</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor336"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor356"><span 
 class="pcrr7t-x-x-90">$SOURCE</span></span><span 
-class="pcrr7t-x-x-90">/examples/mp3stream</span>
-<br class="fancyvrb" /><a 
- id="x7-53141r8"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor337"><span 
+class="pcrr7t-x-x-90">/examples/mp3stream</span> 
+<a 
+ id="x7-53141r8"></a><span id="textcolor357"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;WARNING:</span><span 
 class="pcrr7t-x-x-90">&#x00A0;on</span><span 
@@ -2205,80 +2026,68 @@ class="pcrr7t-x-x-90">&#x00A0;some</span><span
 class="pcrr7t-x-x-90">&#x00A0;systems</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
 class="pcrr7t-x-x-90">&#x00A0;nohup</span><span 
-class="pcrr7t-x-x-90">&#x00A0;doesn't</span><span 
+class="pcrr7t-x-x-90">&#x00A0;doesn&#8217;t</span><span 
 class="pcrr7t-x-x-90">&#x00A0;work,</span><span 
 class="pcrr7t-x-x-90">&#x00A0;like</span><span 
-class="pcrr7t-x-x-90">&#x00A0;OSX</span></span>
-<br class="fancyvrb" /><a 
- id="x7-53143r9"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor338"><span 
+class="pcrr7t-x-x-90">&#x00A0;OSX</span></span> 
+<a 
+ id="x7-53143r9"></a><span id="textcolor358"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;try</span><span 
 class="pcrr7t-x-x-90">&#x00A0;running</span><span 
 class="pcrr7t-x-x-90">&#x00A0;it</span><span 
-class="pcrr7t-x-x-90">&#x00A0;without</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;without</span></span> 
+<a 
  id="x7-53145r10"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;nohup</span><span 
+class="pcrr7t-x-x-90">nohup</span><span 
 class="pcrr7t-x-x-90">&#x00A0;python</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-u</span><span 
 class="pcrr7t-x-x-90">&#x00A0;handler.py</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;mp3stream.log</span><span 
-class="pcrr7t-x-x-90">&#x00A0;2&#x003E;&amp;1</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&amp;</span>
-<br class="fancyvrb" /><a 
- id="x7-53147r11"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor339"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor359"><span 
+class="pcrb7t-x-x-90">2</span></span><span 
+class="pcrr7t-x-x-90">&gt;&amp;</span><span id="textcolor360"><span 
+class="pcrb7t-x-x-90">1</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;&amp;</span> 
+<a 
+ id="x7-53147r11"></a><span id="textcolor361"><span 
 class="pcrr7t-x-x-90">echo</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor340"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor362"><span 
 class="pcrr7t-x-x-90">$!</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor341"><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor363"><span 
 class="pcrr7t-x-x-90">$DEPLOY</span></span><span 
-class="pcrr7t-x-x-90">/profiles/mp3stream/mp3stream.pid</span></div>
+class="pcrr7t-x-x-90">/profiles/mp3stream/mp3stream.pid</span></pre>
 <!--l. 559--><p class="noindent" ><span 
 class="pcrb7t-x-x-90">profiles/web/run</span>________________________________________________
-<div class="fancyvrb" id="fancyvrb25"><a 
- id="x7-53149r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor342"><span 
-class="pcrr7t-x-x-90">#!/bin/sh</span></span><br class="fancyvrb" /><a 
- id="x7-53151r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor343"><span 
+<pre class="fancyvrb" id="fancyvrb25"><a 
+ id="x7-53149r1"></a><span id="textcolor364"><span 
+class="pcrr7t-x-x-90">#!/bin/sh</span></span> 
+<a 
+ id="x7-53151r2"></a><span id="textcolor365"><span 
 class="pcrr7t-x-x-90">set</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;-e</span><br class="fancyvrb" /><a 
- id="x7-53153r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53155r4"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor344"><span 
+class="pcrr7t-x-x-90">&#x00A0;-e</span> 
+<a 
+ id="x7-53153r3"></a> 
+<a 
+ id="x7-53155r4"></a><span id="textcolor366"><span 
 class="pcrr7t-x-x-90">DEPLOY</span></span><span 
-class="pcrr7t-x-x-90">=/home/YOU/deployment</span>
-<br class="fancyvrb" /><a 
- id="x7-53157r5"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor345"><span 
+class="pcrr7t-x-x-90">=/home/YOU/deployment</span> 
+<a 
+ id="x7-53157r5"></a><span id="textcolor367"><span 
 class="pcrr7t-x-x-90">SOURCE</span></span><span 
-class="pcrr7t-x-x-90">=/home/YOU/projects/mongrel2</span><br class="fancyvrb" /><a 
- id="x7-53159r6"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><br class="fancyvrb" /><a 
- id="x7-53161r7"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor346"><span 
+class="pcrr7t-x-x-90">=/home/YOU/projects/mongrel2</span> 
+<a 
+ id="x7-53159r6"></a> 
+<a 
+ id="x7-53161r7"></a><span id="textcolor368"><span 
 class="pcrr7t-x-x-90">cd</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor347"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor369"><span 
 class="pcrr7t-x-x-90">$SOURCE</span></span><span 
-class="pcrr7t-x-x-90">/examples/chat</span>
-<br class="fancyvrb" /><a 
- id="x7-53163r8"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor348"><span 
+class="pcrr7t-x-x-90">/examples/chat</span> 
+<a 
+ id="x7-53163r8"></a><span id="textcolor370"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;WARNING:</span><span 
 class="pcrr7t-x-x-90">&#x00A0;on</span><span 
@@ -2286,39 +2095,39 @@ class="pcrr7t-x-x-90">&#x00A0;some</span><span
 class="pcrr7t-x-x-90">&#x00A0;systems</span><span 
 class="pcrr7t-x-x-90">&#x00A0;the</span><span 
 class="pcrr7t-x-x-90">&#x00A0;nohup</span><span 
-class="pcrr7t-x-x-90">&#x00A0;doesn't</span><span 
+class="pcrr7t-x-x-90">&#x00A0;doesn&#8217;t</span><span 
 class="pcrr7t-x-x-90">&#x00A0;work,</span><span 
 class="pcrr7t-x-x-90">&#x00A0;like</span><span 
-class="pcrr7t-x-x-90">&#x00A0;OSX</span></span><br class="fancyvrb" /><a 
- id="x7-53165r9"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor349"><span 
+class="pcrr7t-x-x-90">&#x00A0;OSX</span></span> 
+<a 
+ id="x7-53165r9"></a><span id="textcolor371"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;try</span><span 
 class="pcrr7t-x-x-90">&#x00A0;running</span><span 
 class="pcrr7t-x-x-90">&#x00A0;it</span><span 
-class="pcrr7t-x-x-90">&#x00A0;without</span></span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;without</span></span> 
+<a 
  id="x7-53167r10"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;nohup</span><span 
+class="pcrr7t-x-x-90">nohup</span><span 
 class="pcrr7t-x-x-90">&#x00A0;python</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-u</span><span 
 class="pcrr7t-x-x-90">&#x00A0;www.py</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;</span><span 
 class="pcrr7t-x-x-90">&#x00A0;www.log</span><span 
-class="pcrr7t-x-x-90">&#x00A0;2&#x003E;&amp;1</span><span 
-class="pcrr7t-x-x-90">&#x00A0;&amp;</span><br class="fancyvrb" /><a 
- id="x7-53169r11"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor350"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor372"><span 
+class="pcrb7t-x-x-90">2</span></span><span 
+class="pcrr7t-x-x-90">&gt;&amp;</span><span id="textcolor373"><span 
+class="pcrb7t-x-x-90">1</span></span><span 
+class="pcrr7t-x-x-90">&#x00A0;&amp;</span> 
+<a 
+ id="x7-53169r11"></a><span id="textcolor374"><span 
 class="pcrr7t-x-x-90">echo</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor351"><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor375"><span 
 class="pcrr7t-x-x-90">$!</span></span><span 
-class="pcrr7t-x-x-90">&#x00A0;&#x003E;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor352"><span 
+class="pcrr7t-x-x-90">&#x00A0;&gt;</span><span 
+class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor376"><span 
 class="pcrr7t-x-x-90">$DEPLOY</span></span><span 
-class="pcrr7t-x-x-90">/profiles/web/web.pid</span></div>
+class="pcrr7t-x-x-90">/profiles/web/web.pid</span></pre>
                                                                   
 
                                                                   
@@ -2343,21 +2152,19 @@ class="content">                                                                
 class="pplri7t-">Testing With</span>
 <span 
 class="pplri7t-">Curl</span></span></div><!--tex4ht:label?: x7-54001r29 -->
-<div class="fancyvrb" id="fancyvrb26"><a 
+<pre class="fancyvrb" id="fancyvrb26"><a 
  id="x7-54003r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;curl</span><span 
-class="pcrr7t-x-x-90">&#x00A0;http://localhost:6767/</span><br class="fancyvrb" /><a 
- id="x7-54005r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span id="textcolor353"><span 
+class="pcrr7t-x-x-90">curl</span><span 
+class="pcrr7t-x-x-90">&#x00A0;http://localhost:6767/</span> 
+<a 
+ id="x7-54005r2"></a><span id="textcolor377"><span 
 class="pcrr7t-x-x-90">#</span><span 
 class="pcrr7t-x-x-90">&#x00A0;Hello,</span><span 
-class="pcrr7t-x-x-90">&#x00A0;World!</span></span><br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;World!</span></span> 
+<a 
  id="x7-54007r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;curl</span><span 
-class="pcrr7t-x-x-90">&#x00A0;http://localhost:6767/handlertest</span></div>
+class="pcrr7t-x-x-90">curl</span><span 
+class="pcrr7t-x-x-90">&#x00A0;http://localhost:6767/handlertest</span></pre>
                                                                   
 
                                                                   
@@ -2418,29 +2225,26 @@ class="content">                                                                
 class="pplri7t-">Setting Up Static</span>
 <span 
 class="pplri7t-">Content</span></span></div><!--tex4ht:label?: x7-56001r30 -->
-<div class="fancyvrb" id="fancyvrb27"><a 
+<pre class="fancyvrb" id="fancyvrb27"><a 
  id="x7-56003r1"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;cp</span><span 
+class="pcrr7t-x-x-90">cp</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-r</span><span 
-class="pcrr7t-x-x-90">&#x00A0;~/projects/mongrel2/examples/chat/static</span><span 
-class="pcrr7t-x-x-90">&#x00A0;static/chatdemo</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;&#x02DC;/projects/mongrel2/examples/chat/static</span><span 
+class="pcrr7t-x-x-90">&#x00A0;static/chatdemo</span> 
+<a 
  id="x7-56005r2"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;m2sh</span><span 
+class="pcrr7t-x-x-90">m2sh</span><span 
 class="pcrr7t-x-x-90">&#x00A0;stop</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-db</span><span 
 class="pcrr7t-x-x-90">&#x00A0;config.sqlite</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-host</span><span 
 class="pcrr7t-x-x-90">&#x00A0;localhost</span><span 
-class="pcrr7t-x-x-90">&#x00A0;-murder</span>
-<br class="fancyvrb" /><a 
+class="pcrr7t-x-x-90">&#x00A0;-murder</span> 
+<a 
  id="x7-56007r3"></a><span 
-class="pcrr7t-x-x-90">&#x00A0;</span><span 
-class="pcrr7t-x-x-90">&#x00A0;curl</span><span 
+class="pcrr7t-x-x-90">curl</span><span 
 class="pcrr7t-x-x-90">&#x00A0;-I</span><span 
-class="pcrr7t-x-x-90">&#x00A0;http://localhost:6767/chatdemo/</span></div>
+class="pcrr7t-x-x-90">&#x00A0;http://localhost:6767/chatdemo/</span></pre>
                                                                   
 
                                                                   
@@ -2493,11 +2297,11 @@ that the files you were supposed to make are correct. The best tool to use is
 <span 
 class="pcrro7t-">diff</span>.
 <!--l. 664--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">4.8    </span> <a 
+ id="x7-580004.8"></a>Further Improvements</h3>
                                                                   
 
                                                                   
-<h3 class="sectionHead"><span class="titlemark">4.8    </span> <a 
- id="x7-580004.8"></a>Further Improvements</h3>
 <!--l. 666--><p class="noindent" >That ends this chapter, and at this point you should know how to setup nearly
 everything Mongrel2 has to offer right now. You should have a good idea of how
 <span 
@@ -2541,10 +2345,10 @@ class="pcrb7t-">mongrel2 </span>up so it can chroot.
      work locally and then just rsync my changes up to my remote staging
      server.  Everything  has  to  live  in  the  chroot  anyway,  and  the  chroot
      enforces that it is completely self-contained.
+     </li>
                                                                   
 
                                                                   
-     </li>
      <li 
   class="enumerate" id="x7-59006x3">Use  Python&#8217;s  virtualenv  or  anything  similar  to  get  yourself  a  totally
      local environment. Too many systems, such as OSX, have very outdated
@@ -2596,11 +2400,11 @@ class="pplri7t-">not </span>root and can do chroot for you. If you&#8217;re runn
   class="enumerate" id="x7-59018x3">If you need to bind to port 80 but run under daemontools as a regular
      user, then use <a 
 href="http://manpages.ubuntu.com/manpages/lucid/man1/privbind.1.html" >privbind</a> to do it. This tool will run any command, like
+     <span 
+class="pcrb7t-">mongrel2 </span>but it does it in a way that lets the executable grab ports below
                                                                   
 
                                                                   
-     <span 
-class="pcrb7t-">mongrel2 </span>but it does it in a way that lets the executable grab ports below
      1024.  This  restriction  on  ports  is  actually  really  stupid  so  don&#8217;t  worry
      about doing this.
      </li>
@@ -2616,6 +2420,9 @@ class="pcrro7t-">kill </span>on your process manager and see how it behaves. As 
      </li></ol>
 <!--l. 758--><p class="noindent" >As we work on the next phase of Mongrel2 development, this will improve, so watch
 for news about deployment and real applications.
+                                                                  
+
+                                                                  
                                                                   
 
                                                                   
